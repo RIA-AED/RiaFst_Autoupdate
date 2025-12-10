@@ -5386,7 +5386,3 @@ metafile = true
 file = "mods/zeta.pw.toml"
 hash = "e02a4197368c4925bb98658883da17aace29927eeca7773c494be6c879269268"
 metafile = true
-
-[[files]]
-file = "options.txt"
-hash = "1ee90601d28e1026d868b716b8034825867e00c383577f78ebc3aa8101db8f44"
