@@ -4743,6 +4743,11 @@ hash = "f7574bbc725128a0fa6a44c959c67d706d2279ed442dfedf2d135fd955e5ca6b"
 metafile = true
 
 [[files]]
+file = "mods/bocchud.pw.toml"
+hash = "b3bc7829a3b3d1036b6bea11dc637d818faff98b3b9c051fa0a2c4504992410b"
+metafile = true
+
+[[files]]
 file = "mods/buildersaddition.pw.toml"
 hash = "0938d0e86ff900e0a21ceb6e78b807d53d22a5555e9f377bd1065a0bd3024e72"
 metafile = true
@@ -4774,7 +4779,7 @@ metafile = true
 
 [[files]]
 file = "mods/chunky-pregenerator-forge.pw.toml"
-hash = "7d3fded0a343b2953e2a77fd1d2ed7abc547d7008f5b1b842546f28b8df1b802"
+hash = "83f477f76f872f13f868c8a8c498f060a9f818c5cde735a77f3fb823c6852117"
 metafile = true
 
 [[files]]
@@ -4903,6 +4908,11 @@ hash = "7572f8836056240fe046a4701866dc719e680475b4285950dfa6928f3e971dfe"
 metafile = true
 
 [[files]]
+file = "mods/distant-horizons.pw.toml"
+hash = "cd88616a66f67f1d9602263d7f4d51a97cbf060365d5bc9299af4700088895b7"
+metafile = true
+
+[[files]]
 file = "mods/dramatic-doors.pw.toml"
 hash = "ee7c6f097bf9567277fe9bf256c18827f963ffbf2c974f696705374a4c0151c5"
 metafile = true
@@ -4954,7 +4964,7 @@ metafile = true
 
 [[files]]
 file = "mods/farsight.pw.toml"
-hash = "0edc2b9d68e308c820489f8bb378f1eb540ba684ac23be242fcc4655f05ff423"
+hash = "d86d647129eecf8f55ba92ef260939d388532a449f0c77173a2828aaf8b91fba"
 metafile = true
 
 [[files]]
@@ -4973,8 +4983,13 @@ hash = "06db210515a9f2c82f41906dab4b66a1acab6557476be16c9f566b4758d611e4"
 metafile = true
 
 [[files]]
+file = "mods/forgematica.pw.toml"
+hash = "55a44fd9a674715eef539924112f78cff1542e918b31f2cc5174f5133cfc360a"
+metafile = true
+
+[[files]]
 file = "mods/fps-reducer.pw.toml"
-hash = "74343f6931d66da29809e437bfb83d19adcf2bf5c81861071fad6f049c70ed1e"
+hash = "1e037e82c00b2883b09a95a5a18250a91eb4baa70276ccc0c626e068a8db3248"
 metafile = true
 
 [[files]]
@@ -5054,7 +5069,7 @@ metafile = true
 
 [[files]]
 file = "mods/journeymap.pw.toml"
-hash = "b3685b9962a2af90f9b7742ec11b48bb9e0c0899f9280f9cd6bb72bb6a63694c"
+hash = "d552c22f619ffd8c54994ed9185ed3c16cda89c1478f73bcddc0c3fc88d56cc7"
 metafile = true
 
 [[files]]
@@ -5105,6 +5120,11 @@ metafile = true
 [[files]]
 file = "mods/lootjs.pw.toml"
 hash = "43aa2c47e284692aa6182abd00929d5753c8660aea9e23b901da68aa75a68930"
+metafile = true
+
+[[files]]
+file = "mods/mafglib.pw.toml"
+hash = "d3ab3469f7f282fe7515804ecc1df76b0190097bff6b15ba5fd92d0bf479c853"
 metafile = true
 
 [[files]]
@@ -5284,7 +5304,7 @@ metafile = true
 
 [[files]]
 file = "mods/spark.pw.toml"
-hash = "d0e1a79dbcda8499e0f12f4adaa5503f9bbc84a6274ce07b3a3839476622e8e5"
+hash = "771e48e86ecb89e6a127445d64d9460dd991407e1bb7187f9f6cd33a330567f2"
 metafile = true
 
 [[files]]
@@ -5305,6 +5325,11 @@ metafile = true
 [[files]]
 file = "mods/torchslab.pw.toml"
 hash = "cc817f3161081c37d3e33c1c7736465e2d6e8c1bce522438b23b5b4666a83dc3"
+metafile = true
+
+[[files]]
+file = "mods/tweakerge.pw.toml"
+hash = "895c9275dd20a30cbe0a5404b6292bb2e53d4979a175f3a4e7078f68ef8f3ff1"
 metafile = true
 
 [[files]]
