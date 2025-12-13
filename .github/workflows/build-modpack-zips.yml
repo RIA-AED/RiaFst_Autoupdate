@@ -17,17 +17,39 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Cache packwiz binary
+        id: cache-packwiz
+        uses: actions/cache@v4
+        with:
+          path: ./.packwiz/bin
+          key: packwiz-bin-${{ runner.os }}-nightly-link
+
       - name: Download packwiz
+        if: steps.cache-packwiz.outputs.cache-hit != 'true'
         run: |
+          mkdir -p ./.packwiz/bin
           curl -sSL https://nightly.link/packwiz/packwiz/workflows/go/main/Linux%2064-bit%20x86.zip -o packwiz.zip
           unzip packwiz.zip
+          mv packwiz ./.packwiz/bin/packwiz
           rm packwiz.zip
-          chmod +x packwiz
+          chmod +x ./.packwiz/bin/packwiz
+
+      - name: Add packwiz to PATH
+        run: echo "${{ github.workspace }}/.packwiz/bin" >> $GITHUB_PATH
+
+      - name: Cache packwiz downloads
+        id: cache-mods
+        uses: actions/cache@v4
+        with:
+          path: ./.packwiz/cache
+          key: packwiz-cache-${{ runner.os }}-${{ hashFiles('pack.toml', 'index.toml', 'mods/**/*.pw.toml') }}
+          restore-keys: |
+            packwiz-cache-${{ runner.os }}-
 
       - name: Build modpack zips
         run: |
-          ./packwiz refresh
-          ./packwiz curseforge export
+          packwiz refresh --cache "./.packwiz/cache"
+          packwiz curseforge export
 
       - name: Locate output zip files
         id: locate
