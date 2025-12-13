@@ -1,0 +1,83 @@
+name: build-modpack-zips
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  upload-zip:
+    name: Upload root zip artifact
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Download packwiz
+        run: |
+          curl -sSL https://nightly.link/packwiz/packwiz/workflows/go/main/Linux%2064-bit%20x86.zip -o packwiz.zip
+          unzip packwiz.zip
+          rm packwiz.zip
+          chmod +x packwiz
+
+      - name: Build modpack zips
+        run: |
+          ./packwiz refresh
+          ./packwiz curseforge export
+
+      - name: Locate output zip files
+        id: locate
+        shell: bash
+        run: |
+          set -euo pipefail
+          mapfile -t files < <(find . -maxdepth 1 -type f -name '*.zip' -printf '%P\n' | sort)
+          if [[ "${#files[@]}" -eq 0 ]]; then
+            echo "::error::No zip files found in the repository root. Make sure your build step created one."
+            exit 1
+          fi
+          printf '%s\n' "${files[@]}" > zip-files.txt
+          {
+            echo 'paths<<EOF'
+            while IFS= read -r line; do
+              echo "./$line"
+            done < zip-files.txt
+            echo 'EOF'
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Derive artifact name
+        id: metadata
+        shell: bash
+        run: |
+          set -euo pipefail
+          tag="${GITHUB_REF_NAME:-untagged}"
+          name="RiaFst-${tag}-${GITHUB_RUN_NUMBER}"
+          echo "name=$name" >> "$GITHUB_OUTPUT"
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ steps.metadata.outputs.name }}
+          path: ${{ steps.locate.outputs.paths }}
+          if-no-files-found: error
+
+      - name: Summarize artifact
+        if: always()
+        shell: bash
+        run: |
+          if [[ ! -f zip-files.txt ]]; then
+            echo "Zip discovery failed earlier; nothing to summarize." >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+
+          {
+            echo "## Uploaded zip files"
+            while IFS= read -r line; do
+              echo "  - \`$line\`"
+            done < zip-files.txt
+            echo ""
+            echo "- Artifact name: \`${{ steps.metadata.outputs.name }}\`"
+          } >> "$GITHUB_STEP_SUMMARY"
