@@ -1,13 +1,8 @@
-name = "Limitless Concert"
+name = "Limitless_Concert"
 filename = "ywzj_midi-1.20.1-forge-1.9.1-all.jar"
 side = "both"
 
 [download]
-hash-format = "sha1"
-hash = "eb7ccb5e68f1bc355d108f1933bccfd29717e0fe"
-mode = "metadata:curseforge"
-
-[update]
-[update.curseforge]
-file-id = 5397287
-project-id = 909540
+url = "http://igniscloud.icu:6080/mod-resources/ywzj_midi-1.20.1-forge-1.9.1-all.jar"
+hash-format = "sha256"
+hash = "7a74976bd4237575c04ac15150a413b49d9f678beddd87ecceb3f0278086ac44"
