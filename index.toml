@@ -1,6 +1,10 @@
 hash-format = "sha256"
 
 [[files]]
+file = ".index.toml.kate-swp"
+hash = "bf043da8d62c1d87105606c20935926e5016d8a7ec1f42b569125eeacff3932c"
+
+[[files]]
 file = "CustomSkinLoader/CustomSkinLoader.json"
 hash = "db53491d720c24071dfb7a1a55c3a2685522ea07fd04ebc7c3bc3b24572f9c87"
 
@@ -9,60 +13,24 @@ file = "config/createaddition-common.toml"
 hash = "1a84a10801865ed24a45756b47fd84fddeaf6c5628dc095136f623de4ac330fa"
 
 [[files]]
-file = "config/supplementaries-client.toml"
-hash = "866e9c617f844acb9fe143b4838c1e2a1b2034781275dafaa819544b520ee137"
+file = "config/paxi/datapack_load_order.json"
+hash = "d0aaf3172f34275479f0669aa5b0a94b85788ae638f3062b948ec49d31c38293"
 
 [[files]]
-file = "journeymap/config/5.10/journeymap.core.config"
-hash = "c728bd5c5e8fe36866f0e6af7234639f2eebc49150c3c81bbf843c7686a1781f"
+file = "config/paxi/datapacks/Chthonic - 更大的洞穴/data/minecraft/worldgen/noise_settings/overworld.json"
+hash = "5192da47ac16bda0f88300a637779612ae2ba39e31b57796b595f3c3d3d1a1b9"
 
 [[files]]
-file = "journeymap/config/5.10/journeymap.fullmap.config"
-hash = "a772325b032b44fbdf18406fa33a71110f37ecf8919c5568775c8c850c7de205"
+file = "config/paxi/datapacks/Chthonic - 更大的洞穴/pack.mcmeta"
+hash = "1c34df82f8efeff9604b85e4c6a8de600d8987000b0736b4e52c3d254178aa9c"
 
 [[files]]
-file = "journeymap/config/5.10/journeymap.minimap.config"
-hash = "68615812e5e7109bf3075b0c9476d4201e29ddda67a1d935dfc483b0056f299a"
+file = "config/paxi/resourcepack_load_order.json"
+hash = "d0aaf3172f34275479f0669aa5b0a94b85788ae638f3062b948ec49d31c38293"
 
 [[files]]
-file = "journeymap/config/5.10/journeymap.minimap2.config"
-hash = "ae995a0552351524a861abbe64cb9c2efc184582e21b61fe940addced52797aa"
-
-[[files]]
-file = "journeymap/config/5.10/journeymap.topo.config"
-hash = "8333ee31b6a80345f2d15ed085207673a14fe818427db17b39c84ea00663d694"
-
-[[files]]
-file = "journeymap/config/5.10/journeymap.waypoint.config"
-hash = "16069479c952f009e1a6d10a3f58d751d5d84fd3051041fa3df8f587e8258558"
-
-[[files]]
-file = "journeymap/config/5.10/journeymap.webmap.config"
-hash = "ea8b30a327871e454e35026fcba102f85f20974f8bf777d5b189a5a626fe6d32"
-
-[[files]]
-file = "journeymap/server/5.10/journeymap.server.ae2~spatial_storage.config"
-hash = "999855167097b76fc430d87089dc07a8b4c63976d5efdfc0a3b634867fcd164d"
-
-[[files]]
-file = "journeymap/server/5.10/journeymap.server.default.config"
-hash = "dec996707fd27dadf76acf7db718aed6c0b191518562179f855f15d40e0b45f8"
-
-[[files]]
-file = "journeymap/server/5.10/journeymap.server.global.config"
-hash = "4f6492bb1333f7a3abdd61c4b452d27e417b14ebd7834961e22cba9ffe23532f"
-
-[[files]]
-file = "journeymap/server/5.10/journeymap.server.minecraft~overworld.config"
-hash = "29df712b69fa443c13a8c720e827320836ae1a381bfaa940893d8e0e02835d14"
-
-[[files]]
-file = "journeymap/server/5.10/journeymap.server.minecraft~the_end.config"
-hash = "621a62dc027c6913387e0b4b2a8fdb817aa09cf761c6c6dacf1bb55d7f1dc7fd"
-
-[[files]]
-file = "journeymap/server/5.10/journeymap.server.minecraft~the_nether.config"
-hash = "29e1f27c9164215c5ba2855f275e2a6a592cb01f229ca34fc7615ebc0cc23791"
+file = "config/paxi/resourcepacks/Minecraft-Mod-Language-Modpack-Converted-1.20.1.zip"
+hash = "b7a750461ffb2874604be85ccab6dd664de796dd2a9008587dc271da178b7d81"
 
 [[files]]
 file = "kubejs/assets/carpetstairsmod/blockstates/acacia_wood_floor.json"
