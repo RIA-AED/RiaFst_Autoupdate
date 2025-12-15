@@ -1,0 +1,13 @@
+name = "RIAutomobility (Automobility Addon)"
+filename = "riautomobility-1.0.1b.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "e72ebb03901ebbcd88d29ccb5eee3692494bc3eb"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 7327629
+project-id = 1400356

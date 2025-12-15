@@ -1,0 +1,21 @@
+{
+    "items": [
+      "minecraft:nether_wart"
+    ],
+    "reload_ticks": 3,
+    "damage": 8,
+    "split":5,
+    "knockback": 0.1,
+    "drag": 0.95,
+    "velocity_multiplier": 1,
+    "gravity_multiplier": 0.25,
+    "sound_pitch": 3,
+    "effective_range": 8,
+    "damage_decrease_range_outside_range": 0.3,
+    "effects":[
+        {
+            "effect":"minecraft:darkness",
+            "duration":3,
+            "amplifier":0}
+    ]
+}

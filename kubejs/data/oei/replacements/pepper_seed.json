@@ -1,0 +1,10 @@
+[
+  {
+    "matchItems": [
+      "kaleidoscope_cookery:chili_seed",
+      "crockpot:pepper_seeds",
+      "chinjufumod:item_seeds_chilipepper"
+    ],
+    "resultItems": "kaleidoscope_cookery:chili_seed"
+  }
+]

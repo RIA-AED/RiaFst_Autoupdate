@@ -2,12 +2,20 @@
     "items": [
       "create_confectionery:caramelized_marshmellow_on_a_stick"
     ],
-    "reload_ticks": 30,
-    "damage": 20,
+    "reload_ticks": 15,
+    "damage": 14,
     "split":1,
     "knockback": 0.1,
-    "drag": 0.98,
+    "drag": 0.995,
     "velocity_multiplier": 1.5,
-    "gravity_multiplier": 0.5,
-    "sound_pitch": 3
+    "gravity_multiplier": 0.20,
+    "sound_pitch": 3,
+    "effects":[
+        {
+            "effect":"minecraft:poison",
+            "duration":5,
+            "amplifier":1}
+    ],
+    "effective_range": 64,
+    "damage_decrease_range_outside_range": 0.1
 }

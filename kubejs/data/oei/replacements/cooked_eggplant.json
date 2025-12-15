@@ -1,0 +1,9 @@
+[
+  {
+    "matchItems": [
+      "crockpot:cooked_eggplant",
+      "culturaldelights:smoked_eggplant"
+    ],
+    "resultItems": "crockpot:cooked_eggplant"
+  }
+]

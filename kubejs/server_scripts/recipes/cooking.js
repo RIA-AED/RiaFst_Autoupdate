@@ -2,9 +2,9 @@
 
 console.info('服务器脚本（cooking.js）已重载')
 
-ServerEvents.recipes(event=>{
+ServerEvents.recipes(event => {
 
-    event.shapeless('kubejs:bomb_cod_burger', ['minecraft:bread','kubejs:fried_cod','nethersdelight:propelpearl','culturaldelights:cut_pickle']) //劲爆鳕鱼堡
+    event.shapeless('kubejs:bomb_cod_burger', ['minecraft:bread', 'kubejs:fried_cod', 'nethersdelight:propelpearl', 'culturaldelights:cut_pickle']) //劲爆鳕鱼堡
 
     event.custom( //鱿鱼狂欢节
         {
@@ -99,7 +99,7 @@ ServerEvents.recipes(event=>{
                     "item": "kubejs:cut_bean_curd"
                 },
                 {
-                    "item":'minecraft:blaze_powder'
+                    "item": 'minecraft:blaze_powder'
                 },
             ],
             "result": {
@@ -125,10 +125,10 @@ ServerEvents.recipes(event=>{
                     "item": "kubejs:cut_bean_curd"
                 },
                 {
-                    "item":'minecraft:blaze_powder'
+                    "item": 'minecraft:blaze_powder'
                 },
                 {
-                    "item":'minecraft:sweet_berries'
+                    "item": 'minecraft:sweet_berries'
                 },
             ],
             "result": {
@@ -168,6 +168,41 @@ ServerEvents.recipes(event=>{
         }
     )
 
+    event.custom( //三角粥
+        {
+            "type": "farmersdelight:cooking",
+            "recipe_book_tab": "meals",
+            "ingredients": [
+                {
+                    "item": 'minecraft:honey_bottle'
+                },
+                {
+                    "item": 'kubejs:delta_coin_chip'
+                },
+                {
+                    "item": 'minecraft:wheat'
+                },
+                {
+                    "item": 'farmersdelight:rice'
+                },
+                {
+                    "item": 'farmersdelight:rice'
+                },
+                {
+                    "item": 'farmersdelight:rice'
+                },
+            ],
+            "result": {
+                "item": 'kubejs:delta_porridge'
+            },
+            "container": {
+                "item": "minecraft:bowl"
+            },
+            "experience": 1.5,
+            "cookingtime": 200
+        }
+    )
+
     event.custom( //焦糖鳕鱼羹
         {
             "type": "farmersdelight:cooking",
@@ -185,6 +220,41 @@ ServerEvents.recipes(event=>{
             ],
             "result": {
                 "item": "kubejs:caramel_cod_soup"
+            },
+            "container": {
+                "item": "minecraft:bowl"
+            },
+            "experience": 1.5,
+            "cookingtime": 220
+        }
+    )
+
+    event.custom( //拉面
+        {
+            "type": "farmersdelight:cooking",
+            "recipe_book_tab": "meals",
+            "ingredients": [
+                {
+                    "tag": "forge:cooked_pork"
+                },
+                {
+                    "tag": "forge:cooked_pork"
+                },
+                {
+                    "tag": "forge:cooked_eggs"
+                },
+                {
+                    "item": 'minecraft:dried_kelp'
+                },
+                {
+                    "item": 'farmersdelight:raw_pasta'
+                },
+                {
+                    "item": 'farmersdelight:raw_pasta'
+                },
+            ],
+            "result": {
+                "item": "kubejs:ramen"
             },
             "container": {
                 "item": "minecraft:bowl"
@@ -219,7 +289,7 @@ ServerEvents.recipes(event=>{
             "type": "farmersdelight:cutting",
             "ingredients": [
                 {
-                    "item":'kubejs:bean_curd'
+                    "item": 'kubejs:bean_curd'
                 }
             ],
             "tool": {
@@ -227,73 +297,122 @@ ServerEvents.recipes(event=>{
             },
             "result": [
                 {
-                    "item":'kubejs:cut_bean_curd',
+                    "item": 'kubejs:cut_bean_curd',
                     "count": 2
                 }
             ]
         }
     )
 
+    event.custom({
+        "type": "kitchenkarrot:brewing_barrel",
+        "content": {
+            "recipe": [
+                {
+                    "item": 'kubejs:delta_dust'
+                },
+                {
+                    "item": 'kubejs:activated_witch_factor'
+                },
+                {
+                    "item": 'minecraft:red_dye'
+                },
+                {
+                    "item": "minecraft:poppy"
+                },
+                {
+                    "item": 'minecraft:stick'
+                },
+                {
+                    "item": 'minecraft:ghast_tear'
+                }
+            ],
+            "craftingtime": 3600
+        },
+        "result": {
+            "item": "kubejs:drink659"
+        }
+
+    })
+
     event.recipes.create.mixing('kubejs:pasta_with_chocolate', [ //巧克力意面1
-       'farmersdelight:milk_bottle',
-       'farmersdelight:raw_pasta',
-       'create_confectionery:bar_of_black_chocolate',
-       'minecraft:bowl'
+        'farmersdelight:milk_bottle',
+        'farmersdelight:raw_pasta',
+        'create_confectionery:bar_of_black_chocolate',
+        'minecraft:bowl'
     ]).heated()
 
     event.recipes.create.mixing('kubejs:pasta_with_chocolate', [ //巧克力意面2
-       'farmersdelight:milk_bottle',
-       'farmersdelight:raw_pasta',
+        'farmersdelight:milk_bottle',
+        'farmersdelight:raw_pasta',
         Fluid.of('create_confectionery:black_chocolate', 250),
-       'minecraft:bowl'
+        'minecraft:bowl'
     ]).heated()
 
-    event.recipes.create.mixing('culturaldelights:pickle', [ //腌黄瓜
-       'culturaldelights:cucumber',
-        Fluid.of('minecraft:water', 250),
-       'minecraft:nether_wart',
+    event.recipes.create.mixing('kubejs:raw_sunshine_cod', [ //生晴天鳕鱼
+        'kubejs:delta_coin',
+        'minecraft:cod',
+        'minecraft:blaze_powder'
     ])
 
+    event.smoking('kubejs:sunshine_cod', "kubejs:raw_sunshine_cod")//晴天鳕鱼
 
-    event.smoking('kubejs:pizza_margarita','kubejs:raw_pizza_margarita')
+    event.recipes.create.mixing('culturaldelights:pickle', [ //腌黄瓜
+        'culturaldelights:cucumber',
+        Fluid.of('minecraft:water', 250),
+        'minecraft:nether_wart',
+    ])
+
+    event.shaped('kubejs:beef_over_rice', [ //温泉蛋牛肉盖饭
+        'EBO',
+        ' R ',
+        '   '
+    ], {
+        E: '#forge:eggs',
+        B: '#forge:cooked_beef',
+        O: '#forge:crops/onion',
+        R: 'farmersdelight:cooked_rice'
+    })
+
+    event.smoking('kubejs:pizza_margarita', 'kubejs:raw_pizza_margarita')
     event.shaped('kubejs:raw_pizza_margarita', [ //玛格丽特披萨
-       '   ',
-       ' TC',
-       ' P '
+        '   ',
+        ' TC',
+        ' P '
     ], {
-        P:'kubejs:pizza_base',
-        C:'kubejs:cut_cheese',
-        T:'farmersdelight:tomato_sauce'
+        P: 'kubejs:pizza_base',
+        C: 'kubejs:cut_cheese',
+        T: 'farmersdelight:tomato_sauce'
     })
-    event.smoking('kubejs:pork_pizza','kubejs:raw_pork_pizza')
+    event.smoking('kubejs:pork_pizza', 'kubejs:raw_pork_pizza')
     event.shaped('kubejs:raw_pork_pizza', [ //猪肉碎披萨
-       ' M ',
-       ' TC',
-       ' P '
+        ' M ',
+        ' TC',
+        ' P '
     ], {
-        P:'kubejs:pizza_base',
-        C:'kubejs:cut_cheese',
-        T:'farmersdelight:tomato_sauce',
-        M:'minecraft:porkchop'
+        P: 'kubejs:pizza_base',
+        C: 'kubejs:cut_cheese',
+        T: 'farmersdelight:tomato_sauce',
+        M: 'minecraft:porkchop'
     })
-    event.smoking('kubejs:apple_pizza','kubejs:raw_apple_pizza')
+    event.smoking('kubejs:apple_pizza', 'kubejs:raw_apple_pizza')
     event.shaped('kubejs:raw_apple_pizza', [ //苹果披萨
-       ' A ',
-       ' TC',
-       ' P '
+        ' A ',
+        ' TC',
+        ' P '
     ], {
-        P:'kubejs:pizza_base',
-        C:'kubejs:cut_cheese',
-        T:'farmersdelight:tomato_sauce',
-        A:'minecraft:apple'
+        P: 'kubejs:pizza_base',
+        C: 'kubejs:cut_cheese',
+        T: 'farmersdelight:tomato_sauce',
+        A: 'minecraft:apple'
     })
 
     event.recipes.create.mixing('kubejs:fried_cod', [ //油炸鳕鱼
         Fluid.of('kubejs:bean_oil', 250),
-       '#forge:raw_fishes/cod',
+        '#forge:raw_fishes/cod',
     ]).heated()
-    event.shapeless("kubejs:cod_burger",['minecraft:bread','kubejs:fried_cod','culturaldelights:cut_pickle','farmersdelight:milk_bottle'])//深海鳕鱼堡
-    event.recipes.create.mixing("kubejs:cod_burger",['minecraft:bread','kubejs:fried_cod','culturaldelights:cut_pickle','farmersdelight:milk_bottle'])//深海鳕鱼堡
+    event.shapeless("kubejs:cod_burger", ['minecraft:bread', 'kubejs:fried_cod', 'culturaldelights:cut_pickle', 'farmersdelight:milk_bottle'])//深海鳕鱼堡
+    event.recipes.create.mixing("kubejs:cod_burger", ['minecraft:bread', 'kubejs:fried_cod', 'culturaldelights:cut_pickle', 'farmersdelight:milk_bottle'])//深海鳕鱼堡
 
     event.custom( //披萨饼底
         {
@@ -318,6 +437,12 @@ ServerEvents.recipes(event=>{
         Fluid.of('minecraft:milk', 1000)
     ])
 
+    event.recipes.create.mixing("kubejs:phantom_shrimp", [ //幻翼虾仁
+        "minecraft:gunpowder",
+        '4x crabbersdelight:cooked_shrimp',
+        'minecraft:phantom_membrane'
+    ])
+
     event.recipes.createCompacting(Fluid.of('kubejs:bean_oil', 100), [ //豆油
         Item.of('chinjufumod:item_seeds_soy')
     ])
@@ -337,42 +462,42 @@ ServerEvents.recipes(event=>{
 
     event.recipes.createFilling('kubejs:soy_sause_bottle', [ //酱油瓶
         Fluid.of('kubejs:soy_sause', 250),
-       'minecraft:glass_bottle'
+        'minecraft:glass_bottle'
     ])
 
     event.recipes.createPressing('kubejs:pizza_base', [ //披萨饼底
-       '#forge:dough'
+        '#forge:dough'
     ])
 
     event.recipes.createCompacting('3x kubejs:digestion_pellow', [ //健胃消食片
-       'minecraft:wheat',
-       'minecraft:wheat',
-       'minecraft:bone',
-       'minecraft:slime_ball',
+        'minecraft:wheat',
+        'minecraft:wheat',
+        'minecraft:bone',
+        'minecraft:slime_ball',
         Fluid.of('minecraft:milk', 250)
     ])
 
     event.recipes.createSequencedAssembly([ //生玛格丽特披萨序列组装
         Item.of('kubejs:raw_pizza_margarita').withChance(1.0),
-    ],'kubejs:pizza_base', [
-        event.recipes.createDeploying('kubejs:pizza_base', ['kubejs:pizza_base','farmersdelight:tomato_sauce']),
-        event.recipes.createDeploying('kubejs:pizza_base', ['kubejs:pizza_base','kubejs:cut_cheese']),
+    ], 'kubejs:pizza_base', [
+        event.recipes.createDeploying('kubejs:pizza_base', ['kubejs:pizza_base', 'farmersdelight:tomato_sauce']),
+        event.recipes.createDeploying('kubejs:pizza_base', ['kubejs:pizza_base', 'kubejs:cut_cheese']),
     ]).transitionalItem('kubejs:pizza_base').loops(1)
 
     event.recipes.createSequencedAssembly([ //生苹果披萨序列组装
         Item.of('kubejs:raw_apple_pizza').withChance(1.0),
-    ],'kubejs:pizza_base', [
-        event.recipes.createDeploying('kubejs:pizza_base', ['kubejs:pizza_base','farmersdelight:tomato_sauce']),
-        event.recipes.createDeploying('kubejs:pizza_base', ['kubejs:pizza_base','minecraft:apple']),
-        event.recipes.createDeploying('kubejs:pizza_base', ['kubejs:pizza_base','kubejs:cut_cheese']),
+    ], 'kubejs:pizza_base', [
+        event.recipes.createDeploying('kubejs:pizza_base', ['kubejs:pizza_base', 'farmersdelight:tomato_sauce']),
+        event.recipes.createDeploying('kubejs:pizza_base', ['kubejs:pizza_base', 'minecraft:apple']),
+        event.recipes.createDeploying('kubejs:pizza_base', ['kubejs:pizza_base', 'kubejs:cut_cheese']),
     ]).transitionalItem('kubejs:pizza_base').loops(1)
 
     event.recipes.createSequencedAssembly([ //生猪肉碎披萨序列组装
         Item.of('kubejs:raw_pork_pizza').withChance(1.0),
-    ],'kubejs:pizza_base', [
-        event.recipes.createDeploying('kubejs:pizza_base', ['kubejs:pizza_base','farmersdelight:tomato_sauce']),
-        event.recipes.createDeploying('kubejs:pizza_base', ['kubejs:pizza_base','minecraft:porkchop']),
-        event.recipes.createDeploying('kubejs:pizza_base', ['kubejs:pizza_base','kubejs:cut_cheese']),
+    ], 'kubejs:pizza_base', [
+        event.recipes.createDeploying('kubejs:pizza_base', ['kubejs:pizza_base', 'farmersdelight:tomato_sauce']),
+        event.recipes.createDeploying('kubejs:pizza_base', ['kubejs:pizza_base', 'minecraft:porkchop']),
+        event.recipes.createDeploying('kubejs:pizza_base', ['kubejs:pizza_base', 'kubejs:cut_cheese']),
     ]).transitionalItem('kubejs:pizza_base').loops(1)
 
 })

@@ -1,0 +1,10 @@
+[
+  {
+    "matchItems": [
+      "farmersdelight:rice_panicle",
+      "chinjufumod:item_ine",
+      "kaleidoscope_cookery:rice_panicle"
+    ],
+    "resultItems": "farmersdelight:rice_panicle"
+  }
+]

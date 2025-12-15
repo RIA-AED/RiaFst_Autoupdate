@@ -2,16 +2,24 @@
     "items": [
       "farmersdelight:stuffed_pumpkin"
     ],
-    "reload_ticks": 80,
+    "reload_ticks": 20,
     "damage": 1,
     "split":1,
     "knockback": 5,
     "drag": 0.97,
     "velocity_multiplier": 1.5,
-    "gravity_multiplier": 1.5,
+    "gravity_multiplier": 1.75,
     "sound_pitch": 0.25,
     "affect_radius": 8,
     "explosion_knockback": 0.5,
-    "explosion_damage": 16,
-    "penetrate_ratio": 0.5
+    "explosion_damage": 12,
+    "penetrate_ratio": 0.75,
+    "effective_range": 12,
+    "damage_decrease_range_outside_range": 0.05,
+    "effects":[
+        {
+            "effect":"minecraft:slowness",
+            "duration":3,
+            "amplifier":1}
+    ]
 }

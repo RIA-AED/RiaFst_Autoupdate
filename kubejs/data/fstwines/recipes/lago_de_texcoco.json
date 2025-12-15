@@ -1,0 +1,43 @@
+{
+    "type": "kitchenkarrot:cocktail",
+    "author": "Vic_Bloomfield",
+    "content": {
+        "recipe": [
+            {
+                "item": "kitchenkarrot:rum_base"
+            },
+            {
+                "item": "minecraft:bamboo"
+            },
+            {
+                "item": "minecraft:cactus"
+            },
+            {
+                "item": "minecraft:pumpkin"
+            },
+            {
+                "tag": "forge:vegetables/pepper"
+            }
+        ],
+        "craftingtime": 100,
+        "hunger": 6,
+        "saturation": 0,
+        "effect": [
+            {
+                "id": "minecraft:speed",
+                "lvl": 1,
+                "duration": 6000
+            },
+            {
+                "id": "minecraft:absorption",
+                "lvl": 1,
+                "duration": 6000
+            },
+            {
+                "id": "kitchenkarrot:tipsy",
+                "lvl": 1,
+                "duration": 3600
+            }
+        ]
+    }
+}

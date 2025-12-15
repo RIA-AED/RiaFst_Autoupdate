@@ -1,0 +1,9 @@
+[
+  {
+    "matchItems": [
+      "chinjufumod:item_food_cabbage",
+      "farmersdelight:cabbage"
+    ],
+    "resultItems": "farmersdelight:cabbage"
+  }
+]

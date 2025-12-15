@@ -34,8 +34,6 @@ StartupEvents.registry("item", event => {
       food.hunger(10)
     })
     .displayName('焦糖鳕鱼羹')
-  // 清除椅子
-  event.create("seat_clear").glow(true).unstackable().displayName("清除椅子")
   // 健胃消食片
   event.create('digestion_pellow').maxStackSize(64)
     .food((food) => {
@@ -127,9 +125,38 @@ StartupEvents.registry("item", event => {
   event.create('roller_ticket').displayName("抽奖卷")
   //大豆油
   event.create('soy_bean_oil').tag("forge:cooking_oil").maxStackSize(16).displayName("大豆油")
+  //幻翼虾仁
+  event.create('phantom_shrimp').displayName("幻翼虾仁").food((food) => { food.hunger(7).saturation(1.5) })
+  //三角粥
+  event.create('delta_porridge').displayName("三角粥").food((food) => { food.hunger(9).saturation(0.8) }).useAnimation("drink")
+  //魔女因子
+  event.create("witch_factor").displayName("魔女因子")
+  //活化的魔女因子
+  event.create("activated_witch_factor").displayName("活化的魔女因子")
+  //饮品659
+  event.create("drink659").food((food) => { food.hunger(2).saturation(1.5).alwaysEdible() }).useAnimation("drink").displayName("饮品659")
+  //晴天鳕鱼
+  event.create("sunshine_cod").food((food) => { food.hunger(5).saturation(1.5).alwaysEdible() }).displayName("晴天鳕鱼")
+  //量产晴天鳕鱼
+  event.create("raw_sunshine_cod").displayName("生晴天鳕鱼")
+  //温泉蛋牛肉盖饭
+  event.create("beef_over_rice").food((food) => { food.hunger(10).saturation(0.6).alwaysEdible() }).displayName("温泉蛋牛肉盖饭")
+  //秘封洋葱绿叶肥虫汤
+  event.create("bug_soup").food((food) => {
+    food.hunger(4).saturation(0.2).alwaysEdible()
+    .effect('minecraft:mining_fatigue', 600, 1, 1)
+    .effect('minecraft:speed', 1200, 0, 1)
+  }).displayName("秘封洋葱绿叶肥虫汤")
 })
 
 StartupEvents.registry("block", event => {
+  event.create("ramen", "cardinal").defaultCutout()
+    .box(2, 0, 2, 14, 6, 14, true)
+    .soundType('wool')
+    .hardness(1)
+    .noDrops()
+    .property(BlockProperties.BITES)
+    .displayName('拉面')
   event.create('seller', "cardinal").defaultCutout() //售货机
     .soundType('stone')
     .box(1, 0, 1, 15, 16, 15, true)
@@ -289,6 +316,13 @@ StartupEvents.registry("fluid", event => {
     .displayName('酱油')
   event.create('ghast_tear').bucketColor(0xcdeeee).noBlock().thinTexture(0xcdeeee)
     .displayName('恶魂之泪')
+})
+
+StartupEvents.registry("mob_effect", event => {
+  event.create("fair_play").beneficial().color(0x00FF00).displayName("绿玩")
+  event.create("rewind").beneficial().color(0xBA0000).displayName("死亡回溯")
+  event.create("hot_potato").harmful().color(0xFF6D37).displayName("击鼓传花")
+  event.create("madness").harmful().color(0xC0C0C0).displayName("谵妄")
 })
 
 /*

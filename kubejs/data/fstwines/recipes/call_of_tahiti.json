@@ -1,0 +1,43 @@
+{
+    "type": "kitchenkarrot:cocktail",
+    "author": "Volloval",
+    "content": {
+        "recipe": [
+            {
+                "item": "minecraft:stick"
+            },
+            {
+                "item": "culturaldelights:corn_cob"
+            },
+            {
+                "item": "minecraft:flowering_azalea_leaves"
+            },
+            {
+                "item": "minecraft:yellow_dye"
+            },
+            {
+                "item": "kitchenkarrot:water"
+            }
+        ],
+        "craftingtime": 80,
+        "hunger": 1,
+        "saturation": 2,
+        "effect": [
+            {
+                "id": "kitchenkarrot:tipsy",
+                "lvl": 0,
+                "duration": 3600
+            },
+            {
+                "id": "minecraft:blindness",
+                "lvl": 0,
+                "duration": 200
+            },
+            {
+                "id": "minecraft:mining_fatigue",
+                "lvl": 0,
+                "duration": 600
+            }
+        ]
+    }
+}

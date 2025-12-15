@@ -11,7 +11,7 @@
     "sound_pitch": 0.01,
     "affect_radius": 6,
     "explosion_knockback": -1.5,
-    "explosion_damage": 1,
+    "explosion_damage": 0,
     "penetrate_ratio": 1,
     "effects":[
         {

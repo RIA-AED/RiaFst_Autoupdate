@@ -3,11 +3,13 @@
       "culturaldelights:pickle"
     ],
     "reload_ticks": 40,
-    "damage": 24,
+    "damage": 28,
     "split":1,
-    "knockback": 0,
+    "knockback": 1,
     "drag": 0.995,
     "velocity_multiplier": 2,
     "gravity_multiplier": 0.25,
-    "sound_pitch": 5
+    "sound_pitch": 5,
+    "effective_range": 64,
+    "damage_decrease_range_outside_range": 0.025
 }

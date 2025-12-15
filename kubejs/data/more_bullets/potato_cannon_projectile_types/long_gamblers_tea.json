@@ -9,8 +9,6 @@
     "velocity_multiplier": 1.5,
     "gravity_multiplier": 1,
     "sound_pitch": 0.5,
-    "affect_radius": 3,
-    "penetrate_ratio": 1,
     "effects":[
         {
             "effect":"minecraft:jump_boost",
@@ -27,15 +25,6 @@
             "duration":20,
             "amplifier":0
         }
-        ,{
-            "effect":"minecraft:resistance",
-            "duration":10,
-            "amplifier":0
-        },
-        {
-            "effect":"minecraft:hunger",
-            "duration":20,
-            "amplifier":29
-        }
-    ]
+    ],
+    "hit_self": true
 }

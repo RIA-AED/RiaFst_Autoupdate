@@ -1,0 +1,17 @@
+name = "IMBlocker"
+filename = "IMBlocker-5.0.2-1.19.4-1.20.4.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "17a06405f7129243e3b8b90ed73e454c55e271d1"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 6065354
+project-id = 483760
+
+[option]
+optional = true
+default = false

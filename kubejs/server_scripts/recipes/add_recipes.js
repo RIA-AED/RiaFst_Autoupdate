@@ -367,6 +367,15 @@ ServerEvents.recipes(event => {
 		L: 'create:brass_casing'
 	})
 
+	event.shaped('buildersaddition:cabinet_cherry', [ //cabinet_cherry
+		'AIA',
+		'A A',
+		'AIA'
+	], {
+		I: 'minecraft:cherry_slab',
+		A: 'decorative_blocks:cherry_palisade'
+	})
+
 	event.recipes.create.mixing('kubejs:fiber_mixture', [ //纤维混合物2
 		'minecraft:kelp',
 		'minecraft:kelp',
@@ -447,6 +456,55 @@ ServerEvents.recipes(event => {
 		'minecraft:quartz',
 		Fluid.of('minecraft:lava', 50)
 	]).heated()
+
+	event.recipes.create.compacting("kubejs:witch_factor", [ //魔女因子
+		'ae2:singularity',
+		'minecraft:netherite_scrap',
+		'quark:soul_bead',
+		Fluid.of('kubejs:netherite_liquar', 50)
+	]).superheated()
+
+	event.custom({
+		"type": "createaddition:charging",
+		"input": {
+			"item": "kubejs:witch_factor",
+			"count": 1
+		},
+		"result": {
+			"item": "kubejs:activated_witch_factor",
+			"count": 1,
+		},
+		"energy": 50000,
+		"maxChargeRate": 1000
+	})
+
+	let corundumList = [ //刚玉列表
+		'quark:white_corundum_cluster',
+		'quark:red_corundum_cluster',
+		'quark:orange_corundum_cluster',
+		'quark:yellow_corundum_cluster',
+		'quark:green_corundum_cluster',
+		'quark:blue_corundum_cluster',
+		'quark:indigo_corundum_cluster',
+		'quark:violet_corundum_cluster',
+		'quark:black_corundum_cluster'
+	]
+
+	corundumList.forEach(it => { //刚玉炼铝
+		event.custom({
+			"type": "createaddition:charging",
+			"input": {
+				"item": it,
+				"count": 1
+			},
+			"result": {
+				"item": 'chinjufumod:item_ingot_alumi',
+				"count": 1,
+			},
+			"energy": 10000,
+			"maxChargeRate": 1000
+		})
+	})
 
 	event.recipes.createSequencedAssembly([ //下界合金序列组装
 		Item.of('minecraft:netherite_ingot').withChance(1.0),
@@ -683,29 +741,57 @@ ServerEvents.recipes(event => {
 		});
 	});
 
-    const tunnelTypes = ['fe', 'redstone', 'me', 'item', 'fluid', 'light'];	//ae2调谐配方转化为工作台配方
+	const tunnelTypes = ['fe', 'redstone', 'me', 'item', 'fluid', 'light'];	//ae2调谐配方转化为工作台配方
 
-    tunnelTypes.forEach(inputType => {
-        tunnelTypes.forEach(outputType => {
-            if (inputType === outputType) return;
+	tunnelTypes.forEach(inputType => {
+		tunnelTypes.forEach(outputType => {
+			if (inputType === outputType) return;
 
-            const X = `ae2:${inputType}_p2p_tunnel`;
-            const T = `#ae2:p2p_attunements/${outputType}_p2p_tunnel`;
-            const output = `ae2:${outputType}_p2p_tunnel`;
+			const X = `ae2:${inputType}_p2p_tunnel`;
+			const T = `#ae2:p2p_attunements/${outputType}_p2p_tunnel`;
+			const output = `ae2:${outputType}_p2p_tunnel`;
 
-            event.shaped(
-                Item.of(output, 8),
-                [
-                    "XXX",
-                    "XTX",
-                    "XXX"
-                ],
-                {
-                    X: X,
-                    T: T
-                }
-            ).id(`kubejs:p2p_attunements/${inputType}_to_${outputType}`);
-        });
-    });
+			event.shaped(
+				Item.of(output, 8),
+				[
+					"XXX",
+					"XTX",
+					"XXX"
+				],
+				{
+					X: X,
+					T: T
+				}
+			).id(`kubejs:p2p_attunements/${inputType}_to_${outputType}`);
+		});
+	});
+
+	//原矿
+
+	const oreRecipes = [
+		{ output: 'minecraft:coal_ore', ingredient: 'minecraft:coal' },
+		{ output: 'minecraft:iron_ore', ingredient: 'minecraft:iron_ingot' },
+		{ output: 'minecraft:lapis_ore', ingredient: 'minecraft:lapis_lazuli' },
+		{ output: 'minecraft:copper_ore', ingredient: 'minecraft:copper_ingot' },
+		{ output: 'create:zinc_ore', ingredient: 'create:zinc_ingot' },
+		{ output: 'minecraft:gold_ore', ingredient: 'minecraft:gold_ingot' },
+		{ output: 'minecraft:redstone_ore', ingredient: 'minecraft:redstone' },
+		{ output: 'minecraft:emerald_ore', ingredient: 'minecraft:emerald' },
+		{ output: 'minecraft:diamond_ore', ingredient: 'minecraft:diamond' }
+	];
+
+	oreRecipes.forEach(recipe => {
+
+		event.recipes.createCompacting(recipe.output, [
+			'minecraft:stone',
+			`7x ${recipe.ingredient}`
+		]).heated();
+
+		let deepslateOre = recipe.output.replace(':', ':deepslate_');
+		event.recipes.createCompacting(deepslateOre, [
+			'minecraft:deepslate',
+			`7x ${recipe.ingredient}`
+		]).heated();
+	});
 
 })

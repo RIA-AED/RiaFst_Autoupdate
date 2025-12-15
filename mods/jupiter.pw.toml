@@ -1,0 +1,13 @@
+name = "Jupiter"
+filename = "Jupiter-2.2-forge.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "4a933208b2889100da91cdc634f72f0dadc7ad05"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 6539428
+project-id = 1072905

@@ -1,0 +1,10 @@
+[
+  {
+    "matchItems": [
+      "crockpot:cooked_egg",
+      "kaleidoscope_cookery:fried_egg",
+      "farmersdelight:fried_egg"
+    ],
+    "resultItems": "kaleidoscope_cookery:fried_egg"
+  }
+]

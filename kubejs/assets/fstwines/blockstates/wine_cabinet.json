@@ -1,0 +1,64 @@
+{
+  "variants": {
+    "facing=north,state=1": {
+      "model": "kubejs:block/wine_cabinet/wine_cabinet"
+    },
+    "facing=north,state=2": {
+      "model": "kubejs:block/wine_cabinet/wine_cabinet_left"
+    },
+    "facing=north,state=3": {
+      "model": "kubejs:block/wine_cabinet/wine_cabinet_right"
+    },
+    "facing=north,state=4": {
+      "model": "kubejs:block/wine_cabinet/wine_cabinet_none"
+    },
+    "facing=east,state=1": {
+      "model": "kubejs:block/wine_cabinet/wine_cabinet",
+      "y": 90
+    },
+    "facing=east,state=2": {
+      "model": "kubejs:block/wine_cabinet/wine_cabinet_left",
+      "y": 90
+    },
+    "facing=east,state=3": {
+      "model": "kubejs:block/wine_cabinet/wine_cabinet_right",
+      "y": 90
+    },
+    "facing=east,state=4": {
+      "model": "kubejs:block/wine_cabinet/wine_cabinet_none",
+      "y": 90
+    },
+    "facing=south,state=1": {
+      "model": "kubejs:block/wine_cabinet/wine_cabinet",
+      "y": 180
+    },
+    "facing=south,state=2": {
+      "model": "kubejs:block/wine_cabinet/wine_cabinet_left",
+      "y": 180
+    },
+    "facing=south,state=3": {
+      "model": "kubejs:block/wine_cabinet/wine_cabinet_right",
+      "y": 180
+    },
+    "facing=south,state=4": {
+      "model": "kubejs:block/wine_cabinet/wine_cabinet_none",
+      "y": 180
+    },
+    "facing=west,state=1": {
+      "model": "kubejs:block/wine_cabinet/wine_cabinet",
+      "y": 270
+    },
+    "facing=west,state=2": {
+      "model": "kubejs:block/wine_cabinet/wine_cabinet_left",
+      "y": 270
+    },
+    "facing=west,state=3": {
+      "model": "kubejs:block/wine_cabinet/wine_cabinet_right",
+      "y": 270
+    },
+    "facing=west,state=4": {
+      "model": "kubejs:block/wine_cabinet/wine_cabinet_none",
+      "y": 270
+    }
+  }
+}
