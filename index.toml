@@ -5295,6 +5295,11 @@ hash = "66c2a087e4846edc679ff7cd5c1df2d39e5f10457f4c11be78bc03a1edd4a3f4"
 metafile = true
 
 [[files]]
+file = "mods/creativecore.pw.toml"
+hash = "1a0099366159fe4c62c19e82b512375eaa528574cf1a7d60fc7b2c96e8a83a51"
+metafile = true
+
+[[files]]
 file = "mods/crock-pot.pw.toml"
 hash = "f397733b30e8d9095f21878e604002a4c2e38fd40431590c709f5f49303bec8a"
 metafile = true
@@ -5435,11 +5440,6 @@ hash = "688b011ac6619ffe9b237336b63b4e14a355a1d1fa30793e1b600a223c488369"
 metafile = true
 
 [[files]]
-file = "mods/fruit-trees.pw.toml"
-hash = "b18f6908470893f0e90a9fcae3acc84470daef004d9eca8aca99e61d88d05046"
-metafile = true
-
-[[files]]
 file = "mods/ftb-library-forge.pw.toml"
 hash = "75c061ce78d7d3f818d98bb94f9a68948aa3a1a612f3c26ade989b60b36b9657"
 metafile = true
@@ -5545,11 +5545,6 @@ hash = "4b43cb9df2d792424cd7d25f9df2f97608afadacd58b6ceb9bdfc0a891eaee6a"
 metafile = true
 
 [[files]]
-file = "mods/kiwi.pw.toml"
-hash = "12ea52bd9752d44fcf0b845f9e8f2a825832598a577e35ea9a3b70c52fd5518a"
-metafile = true
-
-[[files]]
 file = "mods/kotlin-for-forge.pw.toml"
 hash = "826c59a1e607641acb85f1e23a2bb7183a2f0a9ccd19ea4f01bbc9d94d480acf"
 metafile = true
@@ -5592,11 +5587,6 @@ metafile = true
 [[files]]
 file = "mods/lootjs.pw.toml"
 hash = "43aa2c47e284692aa6182abd00929d5753c8660aea9e23b901da68aa75a68930"
-metafile = true
-
-[[files]]
-file = "mods/lychee.pw.toml"
-hash = "da396aebe073687a4708fab34474e82b3f26d1a52fa9efeaaa77fdc36ea0ce67"
 metafile = true
 
 [[files]]
@@ -5807,6 +5797,11 @@ metafile = true
 [[files]]
 file = "mods/spark.pw.toml"
 hash = "771e48e86ecb89e6a127445d64d9460dd991407e1bb7187f9f6cd33a330567f2"
+metafile = true
+
+[[files]]
+file = "mods/spice-of-life-onion.pw.toml"
+hash = "a4b6898fca3dbf05731352e645007d9b9106e2a1e15e27afef3c0b3ded1673dd"
 metafile = true
 
 [[files]]
