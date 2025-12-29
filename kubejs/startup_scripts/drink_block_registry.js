@@ -296,9 +296,10 @@ ClientEvents.init(event => {
         .setCustomRender((renderer, ctx) => {
             const be = ctx.blockEntityJS;
             const facing = be.blockState.getValue(BlockProperties.HORIZONTAL_FACING)
-            const slot1 = readStack(be.data.getTags().get('slot1'));
-            const slot2 = readStack(be.data.getTags().get('slot2'));
-
+            try {
+            let slot1 = readStack(be.data.get('slot1')); 
+            let slot2 = readStack(be.data.get('slot2'));
+            
             switch (facing) {
                 case Direction.SOUTH:
                     if (slot1) renderItem(renderer, ctx, slot1, 0.25, 0.46, 0.5, 0, 0.8);
@@ -317,6 +318,7 @@ ClientEvents.init(event => {
                     if (slot1) renderItem(renderer, ctx, slot1, 0.5, 0.46, 0.75, 90, 0.8);
                     break;
             }
+            } catch (error) {}
 
         })
     )

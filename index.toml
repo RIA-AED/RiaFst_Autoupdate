@@ -17,16 +17,18 @@ file = "config/paxi/resourcepack_load_order.json"
 hash = "d0aaf3172f34275479f0669aa5b0a94b85788ae638f3062b948ec49d31c38293"
 
 [[files]]
-file = "config/paxi/resourcepacks/AE2-1.20.1-Guide-zh_CN_v2.0.zip"
-hash = "1b0e56cbb6c6c613060aaf6c086e0bfac5b868a6a0f549179cab6aa968b9064b"
-
-[[files]]
-file = "config/paxi/resourcepacks/Create_Applied_Energistics_2.zip"
-hash = "92a479466676b5d3aee22ec2df7050ec241d92f2fed7cb5f8e7077440dacc8e1"
-
-[[files]]
 file = "config/paxi/resourcepacks/Minecraft-Mod-Language-Modpack-Converted-1.20.1.zip"
 hash = "b7a750461ffb2874604be85ccab6dd664de796dd2a9008587dc271da178b7d81"
+
+[[files]]
+file = "config/paxi/resourcepacks/ae2-1.20.1-guide-zh_cn.pw.toml"
+hash = "b51bffe9fa548c339b715cabdf502d1bf4ca69b716e83d4fb996cd30fbe86a06"
+metafile = true
+
+[[files]]
+file = "config/paxi/resourcepacks/create_applied_energistics-2.pw.toml"
+hash = "9c070713c5fa6434cbb03f23de01f1e3742de4c4df7457a8d7143b8fb36a12d5"
+metafile = true
 
 [[files]]
 file = "kubejs/assets/carpetstairsmod/blockstates/acacia_wood_floor.json"
@@ -5082,7 +5084,7 @@ hash = "9b53612a4f0a36f716f4f3870d8ba494b613b1c2c883511cded14b140b64b019"
 
 [[files]]
 file = "kubejs/startup_scripts/drink_block_registry.js"
-hash = "27c20a620283be8c86b01121a4fe68583d0b4ba6d941b9879c0d61cb7faa434f"
+hash = "72ff8ef9047ff738750f16099a1acaa06fa644eba20833894bd4e4b4ab1fbfb7"
 
 [[files]]
 file = "kubejs/startup_scripts/example.js"
@@ -5262,6 +5264,11 @@ metafile = true
 [[files]]
 file = "mods/create-enchantment-industry.pw.toml"
 hash = "de9a6d80b48e8d99fb561a94a0d28941327c91620a6c1f76af29af370df0925a"
+metafile = true
+
+[[files]]
+file = "mods/create-enhanced-schematicannon.pw.toml"
+hash = "e30b199f886e3409a0c0d82de8bb2a3dad7b58e445321b2b796134181b11622c"
 metafile = true
 
 [[files]]
