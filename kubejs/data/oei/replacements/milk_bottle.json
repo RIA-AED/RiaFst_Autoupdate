@@ -1,0 +1,9 @@
+[
+  {
+    "matchItems": [
+      "crockpot:milk_bottle",
+      "farmersdelight:milk_bottle"
+    ],
+    "resultItems": "farmersdelight:milk_bottle"
+  }
+]

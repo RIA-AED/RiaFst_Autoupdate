@@ -327,5 +327,5 @@ BlockEvents.rightClicked("kubejs:ramen", event => {
 ItemEvents.foodEaten("kubejs:sunshine_cod", event => {
 	event.server.runCommandSilent(`weather sun`)
 	event.server.runCommandSilent(`weather clear`)
-	event.server.tell(`${event.player.name.getString()}吃下了晴天鳕鱼，善哉，天公作美！`)
+	event.server.tell(`${event.player.name.getString()}食用了晴天鳕鱼，善哉，天公作美！`)
 })
