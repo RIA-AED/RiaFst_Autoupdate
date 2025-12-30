@@ -4,3 +4,8 @@
 # Exclude README
 /README.md
 .github
+kubejs/待办事项.txt
+kubejs/README.md
+kubejs/README.txt
+kubejs/LICENSE.md
+kubejs/server_scripts/server_only/*
