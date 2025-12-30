@@ -9,17 +9,23 @@
     "velocity_multiplier": 1.5,
     "gravity_multiplier": 1,
     "sound_pitch": 0.5,
-    "affect_radius": 3,
+    "affect_radius": 5,
     "penetrate_ratio": 1,
     "effects":[
         {
             "effect":"minecraft:regeneration",
-            "duration":10,
-            "amplifier":1}
+            "duration":30,
+            "amplifier":0}
         ,{
             "effect":"minecraft:resistance",
-            "duration":10,
-            "amplifier":1
+            "duration":30,
+            "amplifier":0
         }
-    ]
+        ,{
+            "effect":"minecraft:haste",
+            "duration":30,
+            "amplifier":0
+        }
+    ],
+    "hit_self": true
 }

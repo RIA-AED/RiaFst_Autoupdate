@@ -1,0 +1,38 @@
+{
+    "type": "kitchenkarrot:cocktail",
+    "author": "ACHTER_BERG",
+    "content": {
+        "recipe": [
+            {
+                "item": "kitchenkarrot:rum_base"
+            },
+            {
+                "item": "kitchenkarrot:rum_base"
+            },
+            {
+                "item": "kitchenkarrot:rum_base"
+            },
+            {
+                "item": "kitchenkarrot:coral_coke"
+            },
+            {
+                "item": "kitchenkarrot:ice_cubes"
+            }
+        ],
+        "craftingtime": 80,
+        "hunger": 1,
+        "saturation": 2,
+        "effect": [
+            {
+                "id": "kitchenkarrot:tipsy",
+                "lvl": 0,
+                "duration": 3600
+            },
+            {
+                "id": "minecraft:night_vision",
+                "lvl": 0,
+                "duration": 3600
+            }
+        ]
+    }
+}

@@ -1,0 +1,10 @@
+[
+  {
+    "matchItems": [
+      "farmersdelight:onion",
+      "chinjufumod:item_food_onion",
+      "crockpot:onion"
+    ],
+    "resultItems": "crockpot:onion"
+  }
+]

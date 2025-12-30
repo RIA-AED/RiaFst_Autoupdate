@@ -2,19 +2,29 @@
     "items": [
       "crabbersdelight:cooked_glow_squid_tentacles"
     ],
-    "reload_ticks": 40,
+    "reload_ticks": 20,
     "damage": 0,
-    "knockback": 0,
-    "drag": 0.95,
+    "split":1,
+    "knockback": 5,
+    "drag": 0.97,
     "velocity_multiplier": 1.5,
-    "gravity_multiplier": 1,
-    "sound_pitch": 0.5,
-    "affect_radius": 10,
-    "penetrate_ratio": 0.5,
+    "gravity_multiplier": 1.75,
+    "sound_pitch": 0.25,
+    "affect_radius": 16,
+    "explosion_knockback": 0.5,
+    "explosion_damage": 0,
+    "penetrate_ratio": 1,
+    "effective_range": 12,
+    "damage_decrease_range_outside_range": 0.05,
     "effects":[
         {
             "effect":"minecraft:glowing",
-            "duration":30,
+            "duration":5,
+            "amplifier":0
+        },
+        {
+            "effect":"minecraft:blindness",
+            "duration":5,
             "amplifier":0
         }
     ]

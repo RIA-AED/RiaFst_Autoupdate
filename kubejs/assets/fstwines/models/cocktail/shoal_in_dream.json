@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:item/generated",
+    "textures": {
+      "layer0": "fstwines:item/shoal_in_dream"
+    }
+  }

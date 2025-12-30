@@ -3,11 +3,25 @@
       "crabbersdelight:pearl"
     ],
     "reload_ticks": 6,
-    "damage": 7,
+    "damage": 8,
     "split":1,
     "knockback": 0.5,
     "drag": 0.99,
     "velocity_multiplier": 1.5,
     "gravity_multiplier": 0.5,
-    "sound_pitch": 2
+    "sound_pitch": 2,
+    "effective_range": 32,
+    "damage_decrease_range_outside_range": 0.05,
+    "effects":[
+        {
+          "effect":"minecraft:fire",
+          "duration":5,
+          "amplifier":1
+        },
+        {
+          "effect":"minecraft:blindness",
+          "duration":1,
+          "amplifier":0
+        }
+    ]
 }

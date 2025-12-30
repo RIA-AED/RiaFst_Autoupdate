@@ -8,6 +8,8 @@
     "knockback": 1.5,
     "drag": 0.92,
     "velocity_multiplier": 2,
-    "gravity_multiplier": 1,
-    "sound_pitch": 5
+    "gravity_multiplier": 0.5,
+    "sound_pitch": 5,
+    "effective_range": 20,
+    "damage_decrease_range_outside_range": 0.2
 }

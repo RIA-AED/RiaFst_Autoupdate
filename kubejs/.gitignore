@@ -1,0 +1,8 @@
+# probejs dumps
+config/
+probe/
+exported/
+server_scripts/party_scripts
+jsconfig.json
+data/temp/entity_data.txt
+.idea/

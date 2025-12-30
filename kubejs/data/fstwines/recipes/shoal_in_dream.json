@@ -1,0 +1,33 @@
+{
+    "type": "kitchenkarrot:cocktail",
+    "author": "EndGlacier",
+    "content": {
+        "recipe": [
+            {
+                "item": "kitchenkarrot:water"
+            },
+            {
+                "item": "kitchenkarrot:mead_base"
+            },
+            {
+                "item": "minecraft:glow_ink_sac"
+            },
+            {
+                "item": "farmersdelight:milk_bottle"
+            },
+            {
+                "item": "minecraft:blue_wool"
+            }
+        ],
+        "craftingtime": 80,
+        "hunger": 1,
+        "saturation": 2,
+        "effect": [
+            {
+                "id": "kitchenkarrot:tipsy",
+                "lvl": 0,
+                "duration": 3600
+            }
+        ]
+    }
+}

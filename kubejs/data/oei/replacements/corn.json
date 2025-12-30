@@ -1,0 +1,10 @@
+[
+  {
+    "matchItems": [
+      "chinjufumod:item_food_corn",
+      "culturaldelights:corn_cob",
+      "crockpot:corn"
+    ],
+    "resultItems": "culturaldelights:corn_cob"
+  }
+]

@@ -1,12 +1,12 @@
 name = "RiaFst"
 author = "liziluyu"
-version = "3.5.2"
+version = "3.6.0"
 pack-format = "packwiz:1.1.0"
 
 [index]
 file = "index.toml"
 hash-format = "sha256"
-hash = "9db5c4e5ee6b524428677ef27763921f1f6e2134f0b04789543393a68a4cc218"
+hash = "23cdac715d4897e409f42acdfcd533f720920ed827bf37939fbc7910586838e0"
 
 [versions]
 forge = "47.4.0"

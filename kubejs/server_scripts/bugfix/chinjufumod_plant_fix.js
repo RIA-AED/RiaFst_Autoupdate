@@ -1,8 +1,7 @@
 BlockEvents.rightClicked(event => {
-  const item = event.item;
-  const block = event.block;
-  const player = event.player;
+  const { item, block, player, facing} = event;
 
+  if(facing !== "up") return;
   if (!item || !block) return;
 
   const abovePos = block.pos.above();

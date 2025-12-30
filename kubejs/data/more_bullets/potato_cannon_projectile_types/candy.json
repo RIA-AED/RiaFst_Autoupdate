@@ -3,11 +3,13 @@
       "supplementaries:candy"
     ],
     "reload_ticks": 3,
-    "damage": 5,
+    "damage": 6,
     "split":1,
     "knockback": 0.2,
-    "drag": 0.92,
+    "drag": 0.93,
     "velocity_multiplier": 1.5,
-    "gravity_multiplier": 0.75,
-    "sound_pitch": 3
+    "gravity_multiplier": 0.25,
+    "sound_pitch": 3,
+    "effective_range": 20,
+    "damage_decrease_range_outside_range": 0.1
 }

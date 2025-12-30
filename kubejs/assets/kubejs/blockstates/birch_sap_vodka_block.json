@@ -1,0 +1,34 @@
+{
+  "variants": {
+    "stacks=1,facing=north": {
+      "model": "kubejs:block/cocktail/birch_sap_vodka_block"
+    },
+    "stacks=1,,facing=east": {
+      "model": "kubejs:block/cocktail/birch_sap_vodka_block",
+      "y": 90
+    },
+    "stacks=1,facing=south": {
+      "model": "kubejs:block/cocktail/birch_sap_vodka_block",
+      "y": 180
+    },
+    "stacks=1,,facing=west": {
+      "model": "kubejs:block/cocktail/birch_sap_vodka_block",
+      "y": 270
+    },
+    "stacks=2,facing=north": {
+      "model": "kubejs:block/cocktail/birch_sap_vodka_block2"
+    },
+    "stacks=2,,facing=east": {
+      "model": "kubejs:block/cocktail/birch_sap_vodka_block2",
+      "y": 90
+    },
+    "stacks=2,facing=south": {
+      "model": "kubejs:block/cocktail/birch_sap_vodka_block2",
+      "y": 180
+    },
+    "stacks=2,,facing=west": {
+      "model": "kubejs:block/cocktail/birch_sap_vodka_block2",
+      "y": 270
+    }
+  }
+}

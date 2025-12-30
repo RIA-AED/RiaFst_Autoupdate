@@ -1,0 +1,38 @@
+{
+    "type": "kitchenkarrot:cocktail",
+    "author": "EndGlacier",
+    "content": {
+        "recipe": [
+            {
+                "item": "minecraft:ender_eye"
+            },
+            {
+                "item": "minecraft:netherite_scrap"
+            },
+            {
+                "item": "minecraft:phantom_membrane"
+            },
+            {
+                "item": "minecraft:glistering_melon_slice"
+            },
+            {
+                "item": "minecraft:fermented_spider_eye"
+            }
+        ],
+        "craftingtime": 80,
+        "hunger": 1,
+        "saturation": 2,
+        "effect": [
+            {
+                "id": "kitchenkarrot:tipsy",
+                "lvl": 0,
+                "duration": 3600
+            },
+            {
+                "id": "create_confectionery:rest",
+                "lvl": 0,
+                "duration": 36000
+            }
+        ]
+    }
+}

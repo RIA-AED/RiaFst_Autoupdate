@@ -1,0 +1,13 @@
+name = "AE2 1.20.1 指南汉化 Guide zh_cn"
+filename = "AE2-1.20.1-Guide-zh_CN_v2.0.zip"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/kzD29UaU/versions/RbcIOOvK/AE2-1.20.1-Guide-zh_CN_v2.0.zip"
+hash-format = "sha512"
+hash = "3ef757d1ca503e41026fe62b31c694ab865f30321504044df17873a458c5a14c46e2bf1d88fb235782a8b79543097d3d65abe6da9c74aefd418412836cad4427"
+
+[update]
+[update.modrinth]
+mod-id = "kzD29UaU"
+version = "RbcIOOvK"

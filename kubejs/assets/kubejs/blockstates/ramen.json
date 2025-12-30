@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "bites=0": {
+      "model": "kubejs:block/ramen_0"
+    },
+    "bites=1": {
+      "model": "kubejs:block/ramen_1"
+    },
+    "bites=2": {
+      "model": "kubejs:block/ramen_2"
+    },
+    "bites=3": {
+      "model": "kubejs:block/ramen_3"
+    },
+    "bites=4": {
+      "model": "kubejs:block/ramen_4"
+    }
+  }
+}

@@ -3,11 +3,19 @@
       "createaddition:biomass_pellet"
     ],
     "reload_ticks": 2,
-    "damage": 3,
+    "damage": 4,
     "split":1,
     "knockback": 0,
     "drag": 0.95,
     "velocity_multiplier": 1.5,
-    "gravity_multiplier": 0.5,
-    "sound_pitch": 5
+    "gravity_multiplier": 0.25,
+    "sound_pitch": 5,
+    "effective_range": 20,
+    "damage_decrease_range_outside_range": 0.1,
+    "effects":[
+        {
+            "effect":"minecraft:mining_fatigue",
+            "duration":2,
+            "amplifier":0}
+    ]
 }

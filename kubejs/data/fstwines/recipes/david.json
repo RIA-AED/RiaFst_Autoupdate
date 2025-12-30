@@ -1,0 +1,48 @@
+{
+    "type": "kitchenkarrot:cocktail",
+    "author": "xtaotie233,ACHTER_BERG",
+    "content": {
+        "recipe": [
+            {
+                "item": "kitchenkarrot:vodka_base"
+            },
+            {
+                "item": "kitchenkarrot:vodka_base"
+            },
+            {
+                "item": "kitchenkarrot:ice_cubes"
+            },
+            {
+                "item": "minecraft:light_blue_dye"
+            },
+            {
+                "item": "kitchenkarrot:dragon_breath_coke"
+            }
+        ],
+        "craftingtime": 80,
+        "hunger": 1,
+        "saturation": 2,
+        "effect": [
+            {
+                "id": "kitchenkarrot:tipsy",
+                "lvl": 0,
+                "duration": 3600
+            },
+            {
+                "id": "minecraft:speed",
+                "lvl": 1,
+                "duration": 600
+            },
+            {
+                "id": "minecraft:slowness",
+                "lvl": 0,
+                "duration": 200
+            },
+            {
+                "id": "minecraft:nausea",
+                "lvl": 1,
+                "duration": 100
+            }
+        ]
+    }
+}
