@@ -84,7 +84,6 @@ jobs:
         with:
           name: ${{ steps.metadata.outputs.name }}
           path: ${{ steps.locate.outputs.path }}
-          artifact-format: raw
           if-no-files-found: error
 
       - name: Summarize artifact
