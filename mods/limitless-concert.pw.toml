@@ -3,6 +3,6 @@ filename = "ywzj_midi-1.20.1-forge-1.9.1-all.jar"
 side = "both"
 
 [download]
-url = "http://igniscloud.icu:6080/mod-resources/ywzj_midi-1.20.1-forge-1.9.1-all.jar"
+url = "https://assets.ria.red/fst-client/mods/ywzj_midi-1.20.1-forge-1.9.1-all.jar"
 hash-format = "sha256"
 hash = "7a74976bd4237575c04ac15150a413b49d9f678beddd87ecceb3f0278086ac44"

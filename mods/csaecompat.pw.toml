@@ -3,6 +3,6 @@ filename = "CsaeCompat-1.20.1-c051j-ae15.2.11_0.1.jar"
 side = "both"
 
 [download]
-url = "http://igniscloud.icu:6080/mod-resources/CsaeCompat-1.20.1-c051j-ae15.2.11_0.1.jar"
+url = "https://assets.ria.red/fst-client/mods/CsaeCompat-1.20.1-c051j-ae15.2.11_0.1.jar"
 hash-format = "sha256"
 hash = "5b9d61ec6ac25ca6f8c1054f6d889d7d3a891351536c6d0203f56997ef69317e"

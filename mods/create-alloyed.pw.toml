@@ -3,6 +3,6 @@ filename = "create_alloyed-1.6.0b-TempFix-1.20.1.jar"
 side = "both"
 
 [download]
-url = "http://igniscloud.icu:6080/mod-resources/create_alloyed-1.6.0b-TempFix-1.20.1.jar"
+url = "https://assets.ria.red/fst-client/mods/create_alloyed-1.6.0b-TempFix-1.20.1.jar"
 hash-format = "sha256"
 hash = "1662eb10a24ddc9210e0420859cf4294ef5f4a8c315e1a6adfc06a81d1b5bc92"

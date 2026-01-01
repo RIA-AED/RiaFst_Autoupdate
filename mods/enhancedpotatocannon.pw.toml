@@ -3,6 +3,6 @@ filename = "enhancedpotatocannon-0.2c-rc1.jar"
 side = "both"
 
 [download]
-url = "http://igniscloud.icu:6080/mod-resources/enhancedpotatocannon-0.2c-rc1.jar"
+url = "https://assets.ria.red/fst-client/mods/enhancedpotatocannon-0.2c-rc1.jar"
 hash-format = "sha256"
 hash = "a4b19988f9f9b6c19015bcd58be2d522479201122f0ac066adfedfb14e490ab0"

@@ -4835,6 +4835,10 @@ file = "kubejs/data/oei/replacements/cooked_eggplant.json"
 hash = "5bc062c476e55d8f9d6a80a817d12010ea47848334597cf0bca92319eb78c40e"
 
 [[files]]
+file = "kubejs/data/oei/replacements/cooked_rice.json"
+hash = "84047a501a8d203c6b7356426315c93fe77fd014c8dda0a6e6872ac3e62ca708"
+
+[[files]]
 file = "kubejs/data/oei/replacements/corn.json"
 hash = "d1b962c4cea8c4a984436d3b525d942f20f648ba522ec01fa9def6e2acb6ee1a"
 
@@ -4857,6 +4861,10 @@ hash = "59d3d116b1696acaef82590faccbfc7e83e28cc63ed1c4ea50fcdea5ec373ea5"
 [[files]]
 file = "kubejs/data/oei/replacements/flour.json"
 hash = "f477c5b618f07a4a0c1482b6ddae3cbbf833319790cba2bcaedadf2221ed84ff"
+
+[[files]]
+file = "kubejs/data/oei/replacements/milk_bottle.json"
+hash = "7cfd90885dccfd652c3004092d93270d74b68b245f97343ca0f8688518903c21"
 
 [[files]]
 file = "kubejs/data/oei/replacements/oil.json"
@@ -4948,7 +4956,7 @@ hash = "9e0173615a6149fe07349f9fd270eca70b9ef1f799b4009b49030fd479ed803b"
 
 [[files]]
 file = "kubejs/server_scripts/feature/food_events.js"
-hash = "fedc075c2eef2bae69339b11a051e1ad0b065a8ba93936a8f8777a847cf90afc"
+hash = "e73e5e10bd56e2840db48080cb452913ff473a4c7c7e37f8f9cd094740d0829d"
 
 [[files]]
 file = "kubejs/server_scripts/feature/instruments_server.js"
@@ -5119,7 +5127,7 @@ metafile = true
 
 [[files]]
 file = "mods/antique-atlas.pw.toml"
-hash = "87ec40dfee3463e63c4b1b4c9089161c3a75360e3e684117bcf3737b14b883d5"
+hash = "ba8ebdd01fa331dc8dc20cb649ebd085f08c582aaa88377aa414ba9678a03a47"
 metafile = true
 
 [[files]]
@@ -5174,12 +5182,12 @@ metafile = true
 
 [[files]]
 file = "mods/chinjufumod.pw.toml"
-hash = "c234df5abc92f16f791cb3dc9bc571c026aa95b9b8e4fa638ef64ff7a6efd335"
+hash = "4204459b8285eff244cb5df1d897d7d53989914e9dbe977349abe6f513788586"
 metafile = true
 
 [[files]]
 file = "mods/chms.pw.toml"
-hash = "ca6f7778721408b1ea7d0cd5527b5a9e0684cac68cd455824e315c8e8ee5228b"
+hash = "ccf62d8caae7b47c725f4aefdb691cfc7c465f76bd48e8876545bae48d1f89a2"
 metafile = true
 
 [[files]]
@@ -5214,7 +5222,7 @@ metafile = true
 
 [[files]]
 file = "mods/create-alloyed.pw.toml"
-hash = "6e75a20e4dd8c2a3536a7b3d31ffc21dba308d53e4f00ae959c249a6d8b1388a"
+hash = "f2b94ff8b435155f56c40321f0306863fd390303b40f8d216d1b875949c14df2"
 metafile = true
 
 [[files]]
@@ -5274,7 +5282,7 @@ metafile = true
 
 [[files]]
 file = "mods/createfixforfst.pw.toml"
-hash = "66c2a087e4846edc679ff7cd5c1df2d39e5f10457f4c11be78bc03a1edd4a3f4"
+hash = "658503243905ec0354c207fd53f729ec0ce9b0340d0585530a7306c1c1dedd75"
 metafile = true
 
 [[files]]
@@ -5289,7 +5297,7 @@ metafile = true
 
 [[files]]
 file = "mods/csaecompat.pw.toml"
-hash = "98a269d597cf44c0093980d133208b2a86bfcec9b14de335b36e34a0d5b18aa6"
+hash = "abe1e4a44a0ba7e6f2049fdc22ba0d5b890805f83cb05866606f7a44479dbb6b"
 metafile = true
 
 [[files]]
@@ -5354,7 +5362,7 @@ metafile = true
 
 [[files]]
 file = "mods/enhancedpotatocannon.pw.toml"
-hash = "383fbd240373e17f5dbb1ee8948f21e2e3138448acbe6b43a6c586de079bd7df"
+hash = "717a414bce03e7341fd8ab789c3e7ad833ffcbe779e333a3d111441e27b3eeef"
 metafile = true
 
 [[files]]
@@ -5474,7 +5482,7 @@ metafile = true
 
 [[files]]
 file = "mods/immersive-weathering.pw.toml"
-hash = "6af5e380026e933e9561f6b3e45c836800ad0d44961a069fa38f516af87e0c46"
+hash = "ffa8fcc7cf65bdacdd860f977b0627bd9ce6b253b0dbc34329617097d3ed4177"
 metafile = true
 
 [[files]]
@@ -5559,7 +5567,7 @@ metafile = true
 
 [[files]]
 file = "mods/limitless-concert.pw.toml"
-hash = "5708a8b946ccdd7f5e9bcc02a10d22f3c427c0de4faa9f0f5e40b6f6e0e7b8e7"
+hash = "7494154c868ba0bd05cb55b5928ae6b3dd450696e0c04c711faa10a505c3f08f"
 metafile = true
 
 [[files]]
@@ -5804,12 +5812,12 @@ metafile = true
 
 [[files]]
 file = "mods/torchslab.pw.toml"
-hash = "cc817f3161081c37d3e33c1c7736465e2d6e8c1bce522438b23b5b4666a83dc3"
+hash = "978999aedd7ef82d2b9c7d6f378f07f6c4afeaa570430ccdec39d9df8c4c809d"
 metafile = true
 
 [[files]]
 file = "mods/ultramarine.pw.toml"
-hash = "3aaa2d56635ffcfe027d3486290a7da91b5dd5c26eeccdac9b14c3a588013360"
+hash = "88a22d318b2a3f13ff61170543a767e122a7e34c8f813133d4ef541623d1421e"
 metafile = true
 
 [[files]]

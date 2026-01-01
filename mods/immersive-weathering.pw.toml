@@ -3,6 +3,6 @@ filename = "immersive_weathering-1.20.1-2.0.1-forge.jar"
 side = "both"
 
 [download]
-url = "http://igniscloud.icu:6080/mod-resources/immersive_weathering-1.20.1-2.0.1-forge.jar"
+url = "https://assets.ria.red/fst-client/mods/immersive_weathering-1.20.1-2.0.1-forge.jar"
 hash-format = "sha256"
 hash = "742573af07d998bad44b545e06be07b7790a679df6e84d762a2e5a89a8035cb7"

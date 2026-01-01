@@ -3,6 +3,6 @@ filename = "ultramarine-1.20.1-0.5.1.jar"
 side = "both"
 
 [download]
-url = "http://igniscloud.icu:6080/mod-resources/ultramarine-1.20.1-0.5.1.jar"
+url = "https://assets.ria.red/fst-client/mods/ultramarine-1.20.1-0.5.1.jar"
 hash-format = "sha256"
 hash = "df570968d830dfa1d1e58d899936ca3933e561c83c8ef46eb2378ae30145efca"

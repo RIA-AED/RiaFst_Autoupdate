@@ -3,6 +3,6 @@ filename = "chms-1.18.2-1-2.jar"
 side = "both"
 
 [download]
-url = "http://igniscloud.icu:6080/mod-resources/chms-1.18.2-1-2.jar"
+url = "https://assets.ria.red/fst-client/mods/chms-1.18.2-1-2.jar"
 hash-format = "sha256"
 hash = "f4d4fa0d8b65642cc99ee0ab34efc758c89844893f57952b90340c63165b37ab"
