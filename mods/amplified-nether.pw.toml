@@ -3,11 +3,7 @@ filename = "Amplified_Nether_1.20.1_v1.2.2.jar"
 side = "both"
 
 [download]
-url = "https://cdn.modrinth.com/data/wXiGiyGX/versions/QXFvBT1u/Amplified_Nether_1.20.1_v1.2.2.jar"
+url = "https://assets.ria.red/fst-client/mods/Amplified_Nether_1.20.1_v1.2.2.jar"
 hash-format = "sha512"
 hash = "3c63ccff2b070dd91d508cb273b75d39bb1dc4f5fa74f338e3b98885444bfff1ddfa5f00bda13440817f568b6a19e1e115472a1b676140d499a8f2d930aea0a3"
 
-[update]
-[update.modrinth]
-mod-id = "wXiGiyGX"
-version = "QXFvBT1u"

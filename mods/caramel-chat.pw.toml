@@ -3,16 +3,10 @@ filename = "caramelChat-mc1.20.1-forge-1.2.2.jar"
 side = "client"
 
 [download]
-url = "https://cdn.modrinth.com/data/M4vJe1FJ/versions/xyB6Pr5e/caramelChat-mc1.20.1-forge-1.2.2.jar"
+url = "https://assets.ria.red/fst-client/mods/caramelChat-mc1.20.1-forge-1.2.2.jar"
 hash-format = "sha512"
 hash = "306fd0abc9be636c41e64e82956f1acc8034532ebafc8e53fc862d3858a659bfb6dee69bc7cc9a2cf0aee3f006222a0925fbc609dd2ee5e43b0a2a0246a98811"
 
-[update]
-[update.modrinth]
-mod-id = "M4vJe1FJ"
-version = "xyB6Pr5e"
-
-
 [option]
 optional = true
-default = false
+default = true

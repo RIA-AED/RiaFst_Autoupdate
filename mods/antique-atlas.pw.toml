@@ -6,3 +6,7 @@ side = "both"
 url = "https://assets.ria.red/fst-client/mods/antique-atlas-2.7.2-1.20.jar"
 hash-format = "sha256"
 hash = "d0d914fdac7d557c8d9663e90d9344bf379387f901dff8df3ed76f37ab0bac4c"
+
+[option]
+optional = true
+default = true

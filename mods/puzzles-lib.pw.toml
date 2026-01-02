@@ -3,11 +3,7 @@ filename = "PuzzlesLib-v8.1.19-1.20.1-Forge.jar"
 side = "both"
 
 [download]
-url = "https://cdn.modrinth.com/data/QAGBst4M/versions/G9liaLgv/PuzzlesLib-v8.1.19-1.20.1-Forge.jar"
+url = "https://assets.ria.red/fst-client/mods/PuzzlesLib-v8.1.19-1.20.1-Forge.jar"
 hash-format = "sha512"
 hash = "822fef6a38995f2fe4407cccb4787de117e5b738e1d308d1033a0c807916c4a0f3dd7061e9ef48379d932acf8862c8726d915895dea5f36fa82a360fdfd8210b"
 
-[update]
-[update.modrinth]
-mod-id = "QAGBst4M"
-version = "G9liaLgv"

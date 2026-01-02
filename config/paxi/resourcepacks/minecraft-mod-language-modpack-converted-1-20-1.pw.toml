@@ -1,0 +1,8 @@
+name = "Minecraft-Mod-Language-Modpack-Converted-1.20.1"
+filename = "Minecraft-Mod-Language-Modpack-Converted-1.20.1.zip"
+side = "client"
+
+[download]
+url = "https://assets.ria.red/fst-client/mods/Minecraft-Mod-Language-Modpack-Converted-1.20.1.zip"
+hash-format = "sha512"
+hash = "f6b8d85ee6c334c7eda6afff2178a749c081135a7ad05186a5c7c58131d4b03078d1c855d90acb1d80cbc6d1b796f614dd6852430c77835f2a86e124bbc5a34d"

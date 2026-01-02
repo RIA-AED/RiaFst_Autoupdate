@@ -51,7 +51,7 @@ jobs:
           packwiz refresh --cache "./.packwiz/cache"
           packwiz curseforge export
 
-      - name: Locate output zip files
+      - name: Locate output zip file
         id: locate
         shell: bash
         run: |
@@ -61,14 +61,14 @@ jobs:
             echo "::error::No zip files found in the repository root. Make sure your build step created one."
             exit 1
           fi
-          printf '%s\n' "${files[@]}" > zip-files.txt
-          {
-            echo 'paths<<EOF'
-            while IFS= read -r line; do
-              echo "./$line"
-            done < zip-files.txt
-            echo 'EOF'
-          } >> "$GITHUB_OUTPUT"
+          if [[ "${#files[@]}" -gt 1 ]]; then
+            echo "::error::Multiple zip files detected: ${files[*]}."
+            echo "::error::This workflow currently supports exactly one zip artifact."
+            exit 1
+          fi
+          zip_file="${files[0]}"
+          printf '%s\n' "$zip_file" > zip-files.txt
+          echo "path=./$zip_file" >> "$GITHUB_OUTPUT"
 
       - name: Derive artifact name
         id: metadata
@@ -83,7 +83,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: ${{ steps.metadata.outputs.name }}
-          path: ${{ steps.locate.outputs.paths }}
+          path: ${{ steps.locate.outputs.path }}
           if-no-files-found: error
 
       - name: Summarize artifact

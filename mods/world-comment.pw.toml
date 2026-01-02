@@ -3,11 +3,7 @@ filename = "WorldComment-0.1.2+1.20.1.jar"
 side = "both"
 
 [download]
-url = "https://cdn.modrinth.com/data/GNAofCJ3/versions/8wCMknjy/WorldComment-0.1.2%2B1.20.1.jar"
+url = "https://assets.ria.red/fst-client/mods/WorldComment-0.1.2%2B1.20.1.jar"
 hash-format = "sha512"
 hash = "fdbe3b9a101f495cd9c54ae524096426bb9b6818ad3769f14c4f4b159317db377d938ed89388d7c2886420d6c2af1d4ae502f1d66874f581a1579f2567381903"
 
-[update]
-[update.modrinth]
-mod-id = "GNAofCJ3"
-version = "8wCMknjy"
