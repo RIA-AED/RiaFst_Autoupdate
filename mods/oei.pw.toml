@@ -1,0 +1,8 @@
+name = "oei"
+filename = "OneEnoughItem-Forge-1.0.5.1.jar"
+side = "both"
+
+[download]
+url = "https://assets.ria.red/fst-client/mods/OneEnoughItem-Forge-1.0.5.1.jar"
+hash-format = "sha256"
+hash = "ae6977d4176eb251224e4d30aaca2bc487d0e86b67c6593a47c208b5046b2a67"

@@ -5154,7 +5154,7 @@ metafile = true
 
 [[files]]
 file = "mods/balm.pw.toml"
-hash = "ae089d54ed8c41631781cf963587c3e9abeb3e8fec9e5fbe2556e634625e48e2"
+hash = "73b2644feeaa91a520b9b26c8f40bc61670c6e9d334c7258185e9b45553c8026"
 metafile = true
 
 [[files]]
@@ -5493,13 +5493,13 @@ hash = "6dbe2bdc3bdf706aac9aa7b0c06e0270cc8f11784f885b430296dbfee49c0a6d"
 metafile = true
 
 [[files]]
-file = "mods/jade-addons.pw.toml"
-hash = "88a37ca91b62f9fb72ac35f3abafc4f4dc12fb0499ea12d4a896ac00b7b0520c"
+file = "mods/jade.pw.toml"
+hash = "8f359d190506a6f824763b8e7c390d9e22204ef11e3ffa5ef980000d17e2c2b6"
 metafile = true
 
 [[files]]
-file = "mods/jade.pw.toml"
-hash = "8f359d190506a6f824763b8e7c390d9e22204ef11e3ffa5ef980000d17e2c2b6"
+file = "mods/jadeaddons-5-3-1.pw.toml"
+hash = "81e0ad309034e235102ccbc2b74f0105705848ec924de8967aac383bce9bd30f"
 metafile = true
 
 [[files]]
@@ -5638,13 +5638,13 @@ hash = "b14933e58e98fb9e5ebaa206ba823ccd5bc5d39764a160844d5d4eee59fe5093"
 metafile = true
 
 [[files]]
-file = "mods/oelib.pw.toml"
-hash = "4458bc8440e82d084e9c3f41158720320e98f35711c71effbd78cba1334dbd32"
+file = "mods/oei.pw.toml"
+hash = "6e27913aa3448de7efee6a6c2a19902f20b3a9b3fae1ba9e030ed1fafacdef20"
 metafile = true
 
 [[files]]
-file = "mods/one-enough-item.pw.toml"
-hash = "9c38549981b2cb036b02acf702e0ea271baf34d78adf916dbeb52da9c44a03a1"
+file = "mods/oelib.pw.toml"
+hash = "4458bc8440e82d084e9c3f41158720320e98f35711c71effbd78cba1334dbd32"
 metafile = true
 
 [[files]]
