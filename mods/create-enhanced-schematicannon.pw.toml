@@ -3,16 +3,11 @@ filename = "create_enhanced_schematicannon-1.0.2-0.5.0j.jar"
 side = "both"
 
 [download]
-url = "https://cdn.modrinth.com/data/TfCIbLr4/versions/Zhx10Not/create_enhanced_schematicannon-1.0.2-0.5.0j.jar"
-hash-format = "sha512"
-hash = "4d54ed7c92e895b4698b140d5154764c41eed8d35b548ba16cce2d0cf5912db541033d741ca7037cdb78bd06211e693fa5225d12964ea41887ab0ea396fdc269"
+hash-format = "sha1"
+hash = "45d547d8f196c1324c5353c5bd19876ba65e078b"
+mode = "metadata:curseforge"
 
 [update]
-[update.modrinth]
-mod-id = "TfCIbLr4"
-version = "Zhx10Not"
-
-[option]
-optional = true
-default = true
-description = "This addon enhances schematicannon to palce more blocks and blockentity from other mods."
+[update.curseforge]
+file-id = 7522316
+project-id = 1408767
