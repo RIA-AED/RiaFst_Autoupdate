@@ -6,3 +6,8 @@ side = "both"
 url = "https://assets.ria.red/fst-client/mods/JadeAddons-1.20.1-Forge-5.3.1.jar"
 hash-format = "sha256"
 hash = "a14d9ad7479249265ec01a3213ee0cb462d647634c38faacc975690d98e9bdd2"
+
+[option]
+optional = true
+default = true
+description = "Jade Addons 为 1.18+ 的 玉🔍 添加了更多模组信息显示支持。"

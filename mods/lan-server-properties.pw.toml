@@ -1,6 +1,6 @@
 name = "Lan Server Properties"
 filename = "lanserverproperties-1.11.1-forge.jar"
-side = "both"
+side = "client"
 
 [download]
 hash-format = "sha1"
@@ -15,3 +15,4 @@ project-id = 387365
 [option]
 optional = true
 default = true
+description = "本 Mod 为“对局域网开放”界面增加了一个文本框和一个按钮"

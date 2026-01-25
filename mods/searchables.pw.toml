@@ -1,6 +1,6 @@
 name = "Searchables"
 filename = "Searchables-forge-1.20.1-1.0.3.jar"
-side = "both"
+side = "client"
 
 [download]
 hash-format = "sha1"
@@ -11,3 +11,8 @@ mode = "metadata:curseforge"
 [update.curseforge]
 file-id = 5284015
 project-id = 858542
+
+[option]
+optional = true
+default = true
+description = "本模组是一个前置模组，添加了助手方法，允许根据组件（如形状：方形，颜色：红色）搜索和过滤元素，并内置自动完成（预测对字段的输入）功能。"

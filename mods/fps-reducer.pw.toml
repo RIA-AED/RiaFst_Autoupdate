@@ -1,6 +1,6 @@
 name = "FPS Reducer"
 filename = "FpsReducer2-forge-1.20-2.5.jar"
-side = "both"
+side = "client"
 
 [download]
 hash-format = "sha1"
@@ -15,3 +15,4 @@ project-id = 280294
 [option]
 optional = true
 default = false
+description = "当客户端窗口处于非活动状态或玩家在一段时间内未操作 Minecraft（自 v2.0 起可选）时，此模组会通过自动降低帧率来减少不必要的 GPU 和 CPU 负载。"

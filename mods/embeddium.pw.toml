@@ -1,6 +1,6 @@
 name = "Embeddium"
 filename = "embeddium-0.3.31+mc1.20.1.jar"
-side = "both"
+side = "client"
 
 [download]
 hash-format = "sha1"
@@ -15,3 +15,4 @@ project-id = 908741
 [option]
 optional = true
 default = true
+description = "Embeddium 是 钠 (Sodium) 的非官方分叉，基于 铷 (Rubidium) ，但有着额外的更改和错误修复，以更好地融入 (Neo)Forge 的模组生态。"

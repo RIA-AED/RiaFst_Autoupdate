@@ -1,8 +1,13 @@
 name = "chms"
 filename = "chms-1.18.2-1-2.jar"
-side = "both"
+side = "client"
 
 [download]
 url = "https://assets.ria.red/fst-client/mods/chms-1.18.2-1-2.jar"
 hash-format = "sha256"
 hash = "f4d4fa0d8b65642cc99ee0ab34efc758c89844893f57952b90340c63165b37ab"
+
+[option]
+optional = true
+default = true
+description = "本模组允许你对 mods 文件夹中的模组进行分类。"
