@@ -1,6 +1,6 @@
 name = "ImmediatelyFast"
 filename = "ImmediatelyFast-Forge-1.3.5+1.20.4.jar"
-side = "both"
+side = "client"
 
 [download]
 hash-format = "sha1"
@@ -11,3 +11,8 @@ mode = "metadata:curseforge"
 [update.curseforge]
 file-id = 6236696
 project-id = 686911
+
+[option]
+optional = true
+default = true
+description = "是一个开源的模组，它总体上通过使用自定义缓冲区实现来优化所有即时模式渲染。"

@@ -11,3 +11,8 @@ mode = "metadata:curseforge"
 [update.curseforge]
 file-id = 6855440
 project-id = 324717
+
+[option]
+optional = true
+default = true
+description = "玉🔍 是 Hwyla 的一个附属模组（1.12~1.15）/一个分支和替代品（1.16+）。"

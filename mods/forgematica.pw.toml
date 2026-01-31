@@ -1,6 +1,6 @@
 name = "Forgematica"
 filename = "Forgematica-0.1.13-mc1.20.1.jar"
-side = "both"
+side = "client"
 
 [download]
 hash-format = "sha1"
@@ -15,3 +15,4 @@ project-id = 912441
 [option]
 optional = true
 default = true
+description = "这个模组是 Masa 全家桶 (Neo)Forge 移植之一，Litematica 的 (Neo)Forge 移植版。"

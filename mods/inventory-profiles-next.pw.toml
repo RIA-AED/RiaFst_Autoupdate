@@ -1,6 +1,6 @@
 name = "Inventory Profiles Next"
 filename = "InventoryProfilesNext-forge-1.20-1.10.14.jar"
-side = "both"
+side = "client"
 
 [download]
 hash-format = "sha1"
@@ -15,3 +15,4 @@ project-id = 495267
 [option]
 optional = true
 default = false
+description = "这是一键背包整理的延续模组，下载时务必注意支持版本信息。除一键整理外，模组还添加了大量其他功能。"

@@ -1,6 +1,6 @@
 name = "Packet Fixer"
 filename = "packetfixer-forge-2.0.0-1.19-to-1.20.1.jar"
-side = "both"
+side = "client"
 
 [download]
 hash-format = "sha1"
@@ -11,3 +11,8 @@ mode = "metadata:curseforge"
 [update.curseforge]
 file-id = 6195870
 project-id = 689467
+
+[option]
+optional = true
+default = true
+description = "此模组提高了数据包大小上限，进而修复了因传输网络数据包异常而被踢出的一系列问题。可以将本模组添加至整合包中，以提高模组数量。"

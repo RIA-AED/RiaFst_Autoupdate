@@ -11,3 +11,8 @@ mode = "metadata:curseforge"
 [update.curseforge]
 file-id = 6080449
 project-id = 623908
+
+[option]
+optional = true
+default = true
+description = "本模组为翻新原版的村庄和掠夺者前哨站而存在。"
