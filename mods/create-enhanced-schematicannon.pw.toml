@@ -11,3 +11,8 @@ mode = "metadata:curseforge"
 [update.curseforge]
 file-id = 7522316
 project-id = 1408767
+
+[option]
+optional = true
+default = true
+description = "This addon enhances schematicannon to place more blocks and blockentity from other mods. "
