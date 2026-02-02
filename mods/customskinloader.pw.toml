@@ -1,6 +1,6 @@
 name = "CustomSkinLoader"
 filename = "CustomSkinLoader_ForgeV2-14.20.jar"
-side = "both"
+side = "client"
 
 [download]
 hash-format = "sha1"
@@ -15,3 +15,4 @@ project-id = 286924
 [option]
 optional = true
 default = true
+description = "这是一个可以从网络或本地加载皮肤的模组。"

@@ -1,6 +1,6 @@
 name = "MaFgLib"
 filename = "MaFgLib-0.1.14-mc1.20.1.jar"
-side = "both"
+side = "client"
 
 [download]
 hash-format = "sha1"
@@ -15,3 +15,4 @@ project-id = 910766
 [option]
 optional = true
 default = true
+description = "这个模组是 Masa 全家桶的代码库（MaLiLib）的 (Neo)Forge 移植版，它基本上包含了所有可配置选项，按键绑定系统，大多数的 GUI 代码支持以及其它的实用组件（在此基础上添加了一些关于 (Neo)Forge 的方法）供其他模组使用。"

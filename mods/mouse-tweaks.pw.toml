@@ -1,6 +1,6 @@
 name = "Mouse Tweaks"
 filename = "MouseTweaks-forge-mc1.20.1-2.25.1.jar"
-side = "both"
+side = "client"
 
 [download]
 hash-format = "sha1"
@@ -15,3 +15,4 @@ project-id = 60089
 [option]
 optional = true
 default = true
+description = "Mouse Tweaks 是一个经典的鼠标手势模组，它取代了标准的鼠标右键 (RMB) 拖动机制，添加了两个新的鼠标左键 (LMB) 拖动机制和使用滚轮快速移动物品的能力。"

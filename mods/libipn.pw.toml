@@ -1,6 +1,6 @@
 name = "libIPN"
 filename = "libIPN-forge-1.20-4.0.2.jar"
-side = "both"
+side = "client"
 
 [download]
 hash-format = "sha1"
@@ -15,3 +15,4 @@ project-id = 679177
 [option]
 optional = true
 default = false
+description = "此模组为 一键背包整理 Next 的前置，为其提供了一系列 GUI /配置文件库。"

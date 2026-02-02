@@ -1,6 +1,6 @@
 name = "JourneyMap"
 filename = "journeymap-1.20.1-5.10.1-forge.jar"
-side = "both"
+side = "client"
 
 [download]
 hash-format = "sha1"
@@ -15,3 +15,4 @@ project-id = 32274
 [option]
 optional = true
 default = true
+description = "在游戏内或者网页浏览器上实时显示游戏地图的客户端模组。"

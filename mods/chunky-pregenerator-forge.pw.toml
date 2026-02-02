@@ -15,3 +15,4 @@ project-id = 485681
 [option]
 optional = true
 default = true
+description = "Chunky 可以为你快速且安全地预生成区块，可显著降低跑图时的服务器卡顿。"

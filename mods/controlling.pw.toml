@@ -1,6 +1,6 @@
 name = "Controlling"
 filename = "Controlling-forge-1.20.1-12.0.2.jar"
-side = "both"
+side = "client"
 
 [download]
 hash-format = "sha1"
@@ -11,3 +11,8 @@ mode = "metadata:curseforge"
 [update.curseforge]
 file-id = 4646682
 project-id = 250398
+
+[option]
+optional = true
+default = true
+description = "本模组添加了在控制菜单按名称搜索键位的功能，便于玩家查找键位，以及只显示冲突键位的功能，使得玩家更容易修复键位冲突。"

@@ -15,3 +15,4 @@ project-id = 361579
 [option]
 optional = true
 default = true
+description = "Spark 是用于 Minecraft 客户端、服务端、代理端的性能分析插件/模组。"

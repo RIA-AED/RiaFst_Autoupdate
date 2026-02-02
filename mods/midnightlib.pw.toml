@@ -1,6 +1,6 @@
 name = "MidnightLib"
 filename = "midnightlib-forge-1.4.2.jar"
-side = "both"
+side = "client"
 
 [download]
 hash-format = "sha1"
@@ -11,3 +11,8 @@ mode = "metadata:curseforge"
 [update.curseforge]
 file-id = 4980331
 project-id = 488090
+
+[option]
+optional = true
+default = true
+description = "这是一个库模组，为模组提供了通用的功能与配置系统。"

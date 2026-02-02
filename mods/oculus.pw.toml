@@ -1,6 +1,6 @@
 name = "Oculus"
 filename = "oculus-mc1.20.1-1.8.0.jar"
-side = "both"
+side = "client"
 
 [download]
 hash-format = "sha1"
@@ -15,3 +15,4 @@ project-id = 581495
 [option]
 optional = true
 default = true
+description = "这是一个 Iris 的非官方 Forge 移植版，你可以叫它 Oculus 。"

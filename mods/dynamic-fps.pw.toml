@@ -1,6 +1,6 @@
 name = "Dynamic FPS"
 filename = "dynamic-fps-3.8.0+minecraft-1.20.0-forge.jar"
-side = "both"
+side = "client"
 
 [download]
 hash-format = "sha1"
@@ -15,3 +15,4 @@ project-id = 335493
 [option]
 optional = true
 default = true
+description = "本模组会自动降低游戏在未聚焦（降至 1 FPS）或最小化（完全不渲染）时的帧数。"

@@ -1,6 +1,6 @@
 name = "ProbeJS"
 filename = "probejs-6.0.1-forge.jar"
-side = "both"
+side = "client"
 
 [download]
 hash-format = "sha1"
@@ -11,3 +11,8 @@ mode = "metadata:curseforge"
 [update.curseforge]
 file-id = 5227399
 project-id = 585406
+
+[option]
+optional = true
+default = false
+description = "收集你的整合包中的方块/物品等信息，供 VS Code 文本编辑器使用。"

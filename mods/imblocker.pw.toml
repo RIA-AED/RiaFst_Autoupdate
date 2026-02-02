@@ -1,6 +1,6 @@
 name = "IMBlocker"
 filename = "IMBlocker-5.0.2-1.19.4-1.20.4.jar"
-side = "both"
+side = "client"
 
 [download]
 hash-format = "sha1"
@@ -15,3 +15,4 @@ project-id = 483760
 [option]
 optional = true
 default = false
+description = "此模组是 游戏中中文输入法冲突修复（1.7.2-1.12.2）的 1.14.4+ 版本，能够在游戏中自动切换输入法开关状态。"

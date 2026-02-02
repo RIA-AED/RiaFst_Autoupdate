@@ -1,17 +1,18 @@
 name = "Create: Enhanced Schematicannon"
-filename = "create_enhanced_schematicannon-1.0.1.jar"
+filename = "create_enhanced_schematicannon-1.0.2-0.5.0j.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "bcf8c272cfc69994a901b90254b408a92d9e4b71"
+hash = "45d547d8f196c1324c5353c5bd19876ba65e078b"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 7371903
+file-id = 7522316
 project-id = 1408767
 
 [option]
 optional = true
-default = false
+default = true
+description = "This addon enhances schematicannon to place more blocks and blockentity from other mods. "

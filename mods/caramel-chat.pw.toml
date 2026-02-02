@@ -10,3 +10,4 @@ hash = "306fd0abc9be636c41e64e82956f1acc8034532ebafc8e53fc862d3858a659bfb6dee69b
 [option]
 optional = true
 default = true
+description = "在 Minecraft 中提供增强的 CJK（中文、日文、韩文）IME 输入体验。"

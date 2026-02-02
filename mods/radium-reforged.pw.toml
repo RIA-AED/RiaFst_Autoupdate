@@ -1,6 +1,6 @@
 name = "Radium Reforged"
 filename = "radium-mc1.20.1-0.12.3+git.50c5c33.jar"
-side = "both"
+side = "client"
 
 [download]
 hash-format = "sha1"
@@ -11,3 +11,8 @@ mode = "metadata:curseforge"
 [update.curseforge]
 file-id = 5229844
 project-id = 570017
+
+[option]
+optional = true
+default = true
+description = "镭 (Radium) 是 锂 (Lithium) 的非官方 Forge 版，有着原版锂的所有功能。经测试与 镁 兼容。"

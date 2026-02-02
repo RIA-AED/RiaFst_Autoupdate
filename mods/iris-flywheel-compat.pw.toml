@@ -1,6 +1,6 @@
 name = "Iris & Oculus Flywheel Compat"
 filename = "oculus-flywheel-compat-forge1.20.1+1.1.4.jar"
-side = "both"
+side = "client"
 
 [download]
 hash-format = "sha1"
@@ -15,3 +15,4 @@ project-id = 659897
 [option]
 optional = true
 default = true
+description = "这个模组强制启用光影下 Flywheel 的优化。"
