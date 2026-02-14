@@ -144,9 +144,49 @@ StartupEvents.registry("item", event => {
   //秘封洋葱绿叶肥虫汤
   event.create("bug_soup").food((food) => {
     food.hunger(4).saturation(0.2).alwaysEdible()
-    .effect('minecraft:mining_fatigue', 600, 1, 1)
-    .effect('minecraft:speed', 1200, 0, 1)
+      .effect('minecraft:mining_fatigue', 600, 1, 1)
+      .effect('minecraft:speed', 1200, 0, 1)
   }).displayName("秘封洋葱绿叶肥虫汤")
+  //钻石镰刀
+  const $ChatFormatting = Java.loadClass("net.minecraft.ChatFormatting")
+  event.create("kaleidoscope_cookery:diamond_sickle", 'sword')
+    .displayName("钻石镰刀")
+    .modifyTier(tier => {
+      tier.level = 4
+      tier.uses = 3000
+      tier.speed = 9.0
+      tier.attackDamageBonus = 0.0
+      tier.enchantmentValue = 10
+      tier.repairIngredient = Ingredient.of(Items.DIAMOND)
+    })
+    .speed(-2.4)
+    .tooltip(Component.translatable("tooltip.kaleidoscope_cookery.sickle").withStyle($ChatFormatting.GRAY))
+    .tag('minecraft:swords')
+    .tag('create:upright_on_deployer')
+    .tag('forge:tools')
+    .tag('kaleidoscope_cookery:cookery_mod_items')
+    .tag('minecraft:breaks_decorated_pots')
+    .tag('minecraft:tools')
+  //下界合金镰刀
+  event.create("kaleidoscope_cookery:netherite_sickle", 'sword')
+    .displayName("下界合金镰刀")
+    .modifyTier(tier => {
+      tier.level = 4
+      tier.uses = 4000
+      tier.speed = 9.0
+      tier.attackDamageBonus = 2.0
+      tier.enchantmentValue = 15
+      tier.repairIngredient = Ingredient.of(Items.DIAMOND)
+    })
+    .speed(-2.4)
+    .fireResistant()
+    .tooltip(Component.translatable("tooltip.kaleidoscope_cookery.sickle").withStyle($ChatFormatting.GRAY))
+    .tag('minecraft:swords')
+    .tag('create:upright_on_deployer')
+    .tag('forge:tools')
+    .tag('kaleidoscope_cookery:cookery_mod_items')
+    .tag('minecraft:breaks_decorated_pots')
+    .tag('minecraft:tools')
 })
 
 StartupEvents.registry("block", event => {

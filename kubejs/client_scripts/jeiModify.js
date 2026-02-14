@@ -151,10 +151,10 @@ let information = [
 	//['kubejs:hemostix_plus_plus', ['据悉，星域地块上','并不具备零域中能轻易获得的高质量椰能。','因此，在村北门的传送站深处……']]
 ]
 
-JEIEvents.hideItems(event => { hideItems.forEach(it => { event.hide(it) }) })
+JEIEvents.hideItems(event => { hideItems.forEach(it => { event.hide(it) }); global.removedItems.forEach(it => { event.hide(it) }) })
 
-//TODO:jei说明页全部似乎失效了,夸克的jei说明页在刷屏
-JEIEvents.information(event => { information.forEach(it => { event.add(it[0], it[1]) }) })
+//TODO:夸克的jei说明页在刷屏
+JEIEvents.information(event => { information.forEach(it => { event.addItem(it[0], it[1]) }) })
 
 JEIEvents.removeRecipes(event => {
 	//去除jei中的抽屉+升级合成配方

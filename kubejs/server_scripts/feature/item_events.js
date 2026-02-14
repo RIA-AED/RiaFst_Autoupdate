@@ -2,6 +2,7 @@ const $phantom = Java.loadClass("net.minecraft.world.entity.monster.Phantom")
 ItemEvents.rightClicked(event => {
 	let player = event.player.name.getString()
 	let handitem = event.player.mainHandItem
+	if(event.player.cooldowns.isOnCooldown(handitem.id)) return
 	switch (event.player.mainHandItem.id) {
 		case 'kubejs:harvest_the_night': {//收割黑夜
 			let pos = event.player.block
@@ -39,56 +40,34 @@ ItemEvents.rightClicked(event => {
 			break
 		}
 		case 'kubejs:sparkler': {
-			let pos = event.player.block
-			let yaw = event.player.yaw * 0.01745
-			let pitch = event.player.pitch * 0.01745
+			handitem.count--
 			let speed = 0.5
-
-			let mx = Math.sin(yaw) * (Math.cos(pitch)) * speed * -1
-			let my = -1 * Math.sin(pitch) * speed
-			let mz = Math.cos(yaw) * (Math.cos(pitch)) * speed
-			event.server.runCommandSilent(`summon minecraft:firework_rocket ${pos.x} ${pos.y + 2} ${pos.z} {Motion:[${mx},${my},${mz}],FireworksItem:{tag:{Fireworks:{Flight:1,Explosions:[{Trail:1b,Type:0,Colors:[I;16711680],FadeColors:[I;16711680]}]}},id:"minecraft:firework_rocket",Count:1},Life:0,LifeTime:20}`)
-			event.server.scheduleInTicks(10, function (callback0) {
+			let fireFirework = (colors, fadeColors) => {
 				let pos = event.player.block
 				let yaw = event.player.yaw * 0.01745
 				let pitch = event.player.pitch * 0.01745
 				let mx = Math.sin(yaw) * (Math.cos(pitch)) * speed * -1
 				let my = -1 * Math.sin(pitch) * speed
 				let mz = Math.cos(yaw) * (Math.cos(pitch)) * speed
-				event.server.runCommandSilent(`summon minecraft:firework_rocket ${pos.x} ${pos.y + 2} ${pos.z} {Motion:[${mx},${my},${mz}],FireworksItem:{tag:{Fireworks:{Flight:1,Explosions:[{Trail:1b,Type:0,Colors:[I;16383744],FadeColors:[I;16383744]}]}},id:"minecraft:firework_rocket",Count:1},Life:0,LifeTime:20}`)
+				event.server.runCommandSilent(`summon minecraft:firework_rocket ${pos.x} ${pos.y + 2} ${pos.z} {Motion:[${mx},${my},${mz}],FireworksItem:{tag:{Fireworks:{Flight:1,Explosions:[{Trail:1b,Type:0,Colors:[I;${colors}],FadeColors:[I;${fadeColors}]}]}},id:"minecraft:firework_rocket",Count:1},Life:0,LifeTime:20}`)
+			}
+			let fireworkCfg = [
+				{ticks: 0, colors: 16711680, fadeColors: 16711680},
+				{ticks: 10, colors: 16383744, fadeColors: 16383744},
+				{ticks: 20, colors: 50943, fadeColors: 50943},
+				{ticks: 30, colors: 65311, fadeColors: 65311}
+			]
+			fireworkCfg.forEach(firework => {
+				if (firework.ticks === 0){
+					fireFirework(firework.colors, firework.fadeColors)
+				}else{
+					event.server.scheduleInTicks(firework.ticks, () => {
+						fireFirework(firework.colors, firework.fadeColors)
+					})
+				}
 			})
-			event.server.scheduleInTicks(20, function (callback1) {
-				let pos = event.player.block
-				let yaw = event.player.yaw * 0.01745
-				let pitch = event.player.pitch * 0.01745
-				let mx = Math.sin(yaw) * (Math.cos(pitch)) * speed * -1
-				let my = -1 * Math.sin(pitch) * speed
-				let mz = Math.cos(yaw) * (Math.cos(pitch)) * speed
-				event.server.runCommandSilent(`summon minecraft:firework_rocket ${pos.x} ${pos.y + 2} ${pos.z} {Motion:[${mx},${my},${mz}],FireworksItem:{tag:{Fireworks:{Flight:1,Explosions:[{Trail:1b,Type:0,Colors:[I;50943],FadeColors:[I;50943]}]}},id:"minecraft:firework_rocket",Count:1},Life:0,LifeTime:20}`)
-			})
-			event.server.scheduleInTicks(30, function (callback2) {
-				let pos = event.player.block
-				let yaw = event.player.yaw * 0.01745
-				let pitch = event.player.pitch * 0.01745
-				let mx = Math.sin(yaw) * (Math.cos(pitch)) * speed * -1
-				let my = -1 * Math.sin(pitch) * speed
-				let mz = Math.cos(yaw) * (Math.cos(pitch)) * speed
-				event.server.runCommandSilent(`summon minecraft:firework_rocket ${pos.x} ${pos.y + 2} ${pos.z} {Motion:[${mx},${my},${mz}],FireworksItem:{tag:{Fireworks:{Flight:1,Explosions:[{Trail:1b,Type:0,Colors:[I;65311],FadeColors:[I;65311]}]}},id:"minecraft:firework_rocket",Count:1},Life:0,LifeTime:20}`)
-			})
-			event.server.scheduleInTicks(35, function (callback3) {
-				event.server.runCommandSilent(`clear @a[name=${player}] kubejs:sparkler 1`)
-			})
-			event.player.addItemCooldown(event.player.mainHandItem.id, 50)
+			event.player.addItemCooldown(handitem.id, 50)
 			break
 		}
-	}
-})
-
-ItemEvents.rightClicked(event => { //时装动画
-	let player = event.player.name.getString()
-	let handitem = event.player.mainHandItem
-	event.server.runCommandSilent(`execute at @a[name=${player}] run armourers animation entity ${player} play rightclick`)
-	if (handitem.nbt && handitem.nbt["sound"] != null) {
-		event.server.runCommandSilent(`execute at @a[name=${player}] run playsound ${handitem.nbt["sound"]} player @a`)
 	}
 })

@@ -121,6 +121,10 @@ ServerEvents.recipes(event => {
 	event.shapeless('quark:limestone_pillar', 'create:limestone_pillar')
 	event.shapeless('create:limestone_pillar', 'quark:limestone_pillar')
 	event.shapeless('ultramarine:chisel_table', 'ultramarine:brush_and_inkstone')
+	event.shapeless('minecraft:pink_petals', '3x immersive_weathering:cherry_leaf_pile')
+	event.shapeless('4x farmersdelight:shepherds_pie', ['farmersdelight:shepherds_pie_block', '3x minecraft:bowl'])
+	event.shapeless('4x farmersdelight:stuffed_pumpkin', ['farmersdelight:stuffed_pumpkin_block', '4x minecraft:bowl'])
+	event.shapeless('4x farmersdelight:honey_glazed_ham', ['farmersdelight:honey_glazed_ham_block', '3x minecraft:bowl'])
 	event.stonecutting('create:limestone', 'quark:limestone')
 	event.stonecutting('quark:limestone', 'create:limestone')
 
@@ -294,12 +298,86 @@ ServerEvents.recipes(event => {
 		'minecraft:stone',
 		'ultramarine:raw_hematite'
 	])
+	event.recipes.create.mixing('minecraft:dripstone_block', [ //滴水石块
+		'minecraft:stone',
+		'minecraft:clay_ball'
+	])
+	event.recipes.create.compacting('minecraft:end_stone', [ //末地石
+		'minecraft:stone',
+		Fluid.of('minecraft:water', 250)
+	])
 	event.recipes.create.mixing('minecraft:ancient_debris', [ //远古残骸
 		'minecraft:netherrack',
 		'minecraft:netherite_scrap'
 	]).heated()
 
 	event.recipes.create.crushing('4x minecraft:netherite_scrap', 'minecraft:netherite_ingot')
+
+	event.recipes.create.crushing(Item.of('kaleidoscope_cookery:oil').withChance(0.125), [ //小麦种子粉碎轮出油脂
+		'minecraft:wheat_seeds'
+	])
+	event.recipes.create.crushing(Item.of('kaleidoscope_cookery:oil').withChance(0.25), [ //大豆粉碎轮出油脂
+		'chinjufumod:item_seeds_soy'
+	])
+
+	//各种门
+	//矮喇叭木门（夸克花木）
+	event.stonecutting('2x dramaticdoors:short_quark_blossom_door', 'quark:blossom_door')
+	//高矮蜜脾门
+	event.shaped('dramaticdoors:tall_honeycomb_door', [
+		'AA ',
+		'AA ',
+		'AA '
+	], {
+		A: 'minecraft:honeycomb_block'
+    })
+	event.shaped('dramaticdoors:short_honeycomb_door', [
+		'   ',
+		'AA ',
+		'AA '
+	], {
+		A: 'minecraft:honeycomb_block'
+    })
+	//高矮玻璃门
+	event.shaped('dramaticdoors:tall_glass_door', [
+		'AA ',
+		'AA ',
+		'AA '
+	], {
+		A: 'minecraft:glass'
+    })
+	event.shaped('dramaticdoors:short_glass_door', [
+		'   ',
+		'AA ',
+		'AA '
+	], {
+		A: 'minecraft:glass'
+    })
+	//高矮齿门
+	event.shaped('dramaticdoors:tall_tooth_door', [
+		'AB ',
+		'AB ',
+		'AB '
+	], {
+		A: 'create:cogwheel',
+		B: '#minecraft:planks'
+    })
+	event.shaped('dramaticdoors:short_tooth_door', [
+		'   ',
+		'AB ',
+		'AB '
+	], {
+		A: 'create:cogwheel',
+		B: '#minecraft:planks'
+    })
+	//无材料高矮木门(未完待续)
+
+	//移除兔肉切小肉配方
+	event.remove({id:'kaleidoscope_cookery:chopping_board/raw_cut_small_meats_from_rabbit'})
+	event.replaceInput([{output:'kaleidoscope_cookery:spicy_chicken'},//切制小肉相关森罗配方替换
+		{output:'kaleidoscope_cookery:yakitori'},{output:'kaleidoscope_cookery:stuffed_tiger_skin_pepper'},
+		{output:'kaleidoscope_cookery:numbing_spicy_chicken'},{output:'kaleidoscope_cookery:chicken_and_mushroom_stew'}],
+		'#forge:raw_chicken','kaleidoscope_cookery:raw_cut_small_meats')
 
 	event.recipes.createMechanicalCrafting('kubejs:raw_totem', [ //粗制图腾
 		'  D  ',
@@ -671,6 +749,8 @@ ServerEvents.recipes(event => {
 
 	event.recipes.create.crushing('4x minecraft:honeycomb', 'minecraft:honeycomb_block') //粉碎蜜脾块
 
+	event.smoking('ultramarine:polished_ebony_plank','ultramarine:polished_oak_plank') //乌木板材
+
 	//铜砖瓦锈蚀
 	event.recipes.create.splashing('create:exposed_copper_shingles', 'create:copper_shingles')
 	event.recipes.create.splashing('create:weathered_copper_shingles', 'create:exposed_copper_shingles')
@@ -794,4 +874,63 @@ ServerEvents.recipes(event => {
 		]).heated();
 	});
 
+	event.shaped(
+		Item.of('buildersaddition:cabinet_cherry', 1),
+		[
+			'PSP',
+			'P P',
+			'PSP'
+		],
+		{
+			P: 'quark:cherry_vertical_slab',
+			S: 'minecraft:cherry_slab'
+		}
+	);
+
+	event.shaped(
+		Item.of('kitchenkarrot:shaker', '{finish:0b,items:{Items:[],Size:12},time:0}'),
+		[
+			'   ',
+			'ABA',
+			'   '
+		],
+		{
+			A: 'minecraft:iron_nugget',
+			B: 'minecraft:bucket'
+		}
+	);
+
+	event.shaped(
+		Item.of('buildersaddition:cabinet_bamboo', 1),
+		[
+			'PSP',
+			'P P',
+			'PSP'
+		],
+		{
+			P: 'quark:bamboo_vertical_slab',
+			S: 'minecraft:bamboo_slab'
+		}
+	);
+
+	//钻石镰刀合成
+	event.shaped("kaleidoscope_cookery:diamond_sickle",
+		[
+			"YYX",
+			" TY",
+			"T  "
+		],
+		{
+			X: "minecraft:string",
+			T: "minecraft:stick",
+			Y: "minecraft:diamond"
+		}
+	).id("kaleidoscope_cookery:diamond_sickle");
+
+	//下界合金镰刀合成
+	event.recipes.minecraft.smithing_transform(
+		"kaleidoscope_cookery:netherite_sickle",
+		"kaleidoscope_cookery:diamond_sickle",
+		"minecraft:netherite_ingot"
+	).id("kaleidoscope_cookery:netherite_sickle");
 })

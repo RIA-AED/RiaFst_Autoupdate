@@ -1,4 +1,7 @@
 ServerEvents.tags("item", event => {
+    /*——————森罗厨房——————*/
+    //切制小肉=>生的鸡肉
+    event.add("forge:raw_chicken", "kaleidoscope_cookery:raw_cut_small_meats")
     /*——————多元乐事——————*/
     //茄子
     event.add("forge:crops/eggplant", "culturaldelights:eggplant")
@@ -86,4 +89,10 @@ ServerEvents.tags("block", event => {
     event.add("farmersdelight:heat_sources", "chinjufumod:block_kit_stove")
     event.add("farmersdelight:heat_sources", "chinjufumod:block_kit_oven")
     event.add("farmersdelight:heat_sources", "chinjufumod:block_kit_oven_black")
+    
+    /*——————灯笼修复——————*/
+    event.add('minecraft:mineable/pickaxe', /torchslabmod:.*lantern.*/)
+
+    /*——————蓝图大炮修复——————*/
+    event.add('create:safe_nbt', "supplementaries:blackboard")
 })

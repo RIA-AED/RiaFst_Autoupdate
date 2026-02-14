@@ -1,0 +1,153 @@
+{
+    Contraption: {
+      Actors: [],
+      Anchor: {
+        X: 19,
+        Y: -60,
+        Z: 3
+      },
+      Blocks: {
+        BlockList: [
+          {
+            Pos: 4097L,
+            State: 0
+          },
+          {
+            Pos: 274877906945L,
+            State: 0
+          },
+          {
+            Pos: 549755809793L,
+            State: 1
+          },
+          {
+            Pos: 0L,
+            State: 2
+          },
+          {
+            Pos: 274877902849L,
+            State: 1
+          },
+          {
+            Pos: 274877911041L,
+            State: 3
+          },
+          {
+            Pos: 549755809794L,
+            State: 1
+          },
+          {
+            Pos: 274877902850L,
+            State: 0
+          },
+          {
+            Pos: -4095L,
+            State: 1
+          },
+          {
+            Pos: 4L,
+            State: 3
+          },
+          {
+            Pos: -274877906941L,
+            State: 0
+          },
+          {
+            Pos: 3L,
+            State: 3
+          },
+          {
+            Pos: -274877906942L,
+            State: 1
+          },
+          {
+            Pos: 2L,
+            State: 0
+          },
+          {
+            Pos: -274877906943L,
+            State: 1
+          },
+          {
+            Pos: 274877906947L,
+            State: 3
+          },
+          {
+            Pos: 1L,
+            State: 1
+          },
+          {
+            Pos: 4098L,
+            State: 3
+          },
+          {
+            Pos: 274877906946L,
+            State: 0
+          },
+          {
+            Pos: -274877902847L,
+            State: 1
+          }
+        ],
+        Palette: [
+          {
+            Name: "minecraft:stone",
+            Properties: {
+              weathering: "false"
+            }
+          },
+          {
+            Name: "minecraft:tuff"
+          },
+          {
+            Name: "create:minecart_anchor",
+            Properties: {
+              axis: "z"
+            }
+          },
+          {
+            Name: "minecraft:cobblestone",
+            Properties: {
+              weathering: "false"
+            }
+          }
+        ]
+      },
+      BottomlessSupply: 0b,
+      BoundsFront: [
+        -3.0f,
+        0.0f,
+        -3.0f,
+        4.0f,
+        5.0f,
+        4.0f
+      ],
+      CapturedMultiblocks: [],
+      DisabledActors: [],
+      FluidFuelStorage: [],
+      FluidStorage: [],
+      InitialOrientation: "NORTH",
+      Interactors: [],
+      Passengers: [],
+      RotationMode: "ROTATION_LOCKED",
+      Seats: [],
+      Stalled: 0b,
+      Storage: [],
+      SubContraptions: [],
+      Superglue: [
+        {
+          From: [
+            -1.0d,
+            1.0d,
+            -1.0d
+          ],
+          To: [
+            2.0d,
+            5.0d,
+            2.0d
+          ]
+        }
+      ],
+      Type: "mounted"
+    }
+}

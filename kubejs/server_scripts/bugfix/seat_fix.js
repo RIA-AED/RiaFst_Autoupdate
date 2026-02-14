@@ -7,8 +7,18 @@ BlockEvents.rightClicked(event => {
     const pos = block.pos;
 
     if (!global.isSeat(block)) return;
-    if (player.mainHandItem && player.mainHandItem.id.startsWith("buildersaddition:pillow_")) {
-        return;
+    //添加镇守府被褥特判，我真没招了...
+    if (block.id.startsWith("chinjufumod:block_futon_c")) {
+        var $BaseStage2_FaceWater = Java.loadClass("com.ayutaki.chinjufumod.blocks.base.BaseStage2_FaceWater")
+        var stage = block.blockState.getValue($BaseStage2_FaceWater.STAGE_1_2)
+        if(stage == 1) return;
+    }
+    if (player.mainHandItem && player.mainHandItem.id.startsWith("buildersaddition:pillow_") 
+        && (block.id.startsWith("buildersaddition:stool") || block.id.startsWith("buildersaddition:chair"))) {
+        var $Stool = Java.loadClass("com.mrh0.buildersaddition.blocks.Stool")
+        var $StoolState = Java.loadClass("com.mrh0.buildersaddition.state.StoolState")
+        var pillow = block.blockState.getValue($Stool.PILLOW)
+        if (pillow == $StoolState.None) return
     }
     if (player.isShiftKeyDown()) return
 
@@ -57,7 +67,9 @@ const SeatOffsets = {
     "chinjufumod:block_sofa": { x: 0.5, y: 0.375, z: 0.5 },
     "chinjufumod:block_bench": { x: 0.5, y: 0.4375, z: 0.5 },
     "chinjufumod:block_schoolchair": { x: 0.5, y: 0.4375, z: 0.5 },
-    "chinjufumod:block_admiralchair": { x: 0.5, y: 0.5625, z: 0.5 }
+    "chinjufumod:block_admiralchair": { x: 0.5, y: 0.5625, z: 0.5 },
+    "chinjufumod:block_mzabuton": { x: 0.5, y: 0.1875, z: 0.5 },
+    "chinjufumod:block_futon_c": { x: 0.5, y: 0.225, z: 0.5 }
 };
 
 global.isSeat = function isSeat(block) {

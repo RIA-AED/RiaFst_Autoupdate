@@ -1,0 +1,207 @@
+{
+    Contraption: {
+      Actors: [],
+      Anchor: {
+        X: 22,
+        Y: -60,
+        Z: 3
+      },
+      Blocks: {
+        BlockList: [
+          {
+            Pos: 0L,
+            State: 0
+          },
+          {
+            Pos: 549755809794L,
+            State: 1
+          },
+          {
+            Pos: 274877902850L,
+            State: 1
+          },
+          {
+            Pos: 549755809796L,
+            State: 2
+          },
+          {
+            Pos: 9L,
+            State: 3
+          },
+          {
+            Pos: 7L,
+            State: 4
+          },
+          {
+            Pos: 5L,
+            State: 5
+          },
+          {
+            Pos: 3L,
+            State: 2
+          },
+          {
+            Pos: -274877906943L,
+            State: 6
+          },
+          {
+            Pos: 4099L,
+            State: 5
+          },
+          {
+            Pos: 274877906947L,
+            State: 5
+          },
+          {
+            Pos: 1L,
+            State: 6
+          },
+          {
+            Pos: 4097L,
+            State: 6
+          },
+          {
+            Pos: 274877906945L,
+            State: 7
+          },
+          {
+            Pos: 549755809793L,
+            State: 7
+          },
+          {
+            Pos: 274877902849L,
+            State: 7
+          },
+          {
+            Pos: -4095L,
+            State: 8
+          },
+          {
+            Pos: 549755809795L,
+            State: 1
+          },
+          {
+            Pos: 274877902851L,
+            State: 5
+          },
+          {
+            Pos: 8L,
+            State: 9
+          },
+          {
+            Pos: 6L,
+            State: 5
+          },
+          {
+            Pos: 4L,
+            State: 5
+          },
+          {
+            Pos: -274877906942L,
+            State: 1
+          },
+          {
+            Pos: 2L,
+            State: 7
+          },
+          {
+            Pos: 4098L,
+            State: 2
+          },
+          {
+            Pos: 274877906946L,
+            State: 1
+          }
+        ],
+        Palette: [
+          {
+            Name: "create:minecart_anchor",
+            Properties: {
+              axis: "z"
+            }
+          },
+          {
+            Name: "minecraft:tuff"
+          },
+          {
+            Name: "minecraft:dead_tube_coral_block"
+          },
+          {
+            Name: "minecraft:pointed_dripstone",
+            Properties: {
+              thickness: "tip",
+              vertical_direction: "up",
+              waterlogged: "false"
+            }
+          },
+          {
+            Name: "minecraft:pointed_dripstone",
+            Properties: {
+              thickness: "base",
+              vertical_direction: "up",
+              waterlogged: "false"
+            }
+          },
+          {
+            Name: "minecraft:dripstone_block"
+          },
+          {
+            Name: "minecraft:andesite"
+          },
+          {
+            Name: "minecraft:stone",
+            Properties: {
+              weathering: "false"
+            }
+          },
+          {
+            Name: "immersive_weathering:vitrified_sand"
+          },
+          {
+            Name: "minecraft:pointed_dripstone",
+            Properties: {
+              thickness: "frustum",
+              vertical_direction: "up",
+              waterlogged: "false"
+            }
+          }
+        ]
+      },
+      BottomlessSupply: 0b,
+      BoundsFront: [
+        -3.0f,
+        0.0f,
+        -3.0f,
+        4.0f,
+        10.0f,
+        4.0f
+      ],
+      CapturedMultiblocks: [],
+      DisabledActors: [],
+      FluidFuelStorage: [],
+      FluidStorage: [],
+      InitialOrientation: "NORTH",
+      Interactors: [],
+      Passengers: [],
+      RotationMode: "ROTATION_LOCKED",
+      Seats: [],
+      Stalled: 0b,
+      Storage: [],
+      SubContraptions: [],
+      Superglue: [
+        {
+          From: [
+            -1.0d,
+            1.0d,
+            -1.0d
+          ],
+          To: [
+            2.0d,
+            10.0d,
+            2.0d
+          ]
+        }
+      ],
+      Type: "mounted"
+    }
+}
