@@ -355,6 +355,24 @@ ServerEvents.recipes(event => {
         'minecraft:blaze_powder'
     ])
 
+    event.smoking('kaleidoscope_cookery:fried_egg', '#forge:eggs')//煎蛋
+
+    event.custom({//煎蛋
+        "type": "kaleidoscope_cookery:pot",
+        "ingredients": [
+            {
+                "tag": "forge:eggs"
+            }
+        ],
+        "result": {
+            "item": "kaleidoscope_cookery:fried_egg"
+        },
+        "stir_fry_count": 3,
+        "time": 200
+    })
+
+    event.campfireCooking('kaleidoscope_cookery:fried_egg','#forge:eggs')//煎蛋
+
     event.smoking('kubejs:sunshine_cod', "kubejs:raw_sunshine_cod")//晴天鳕鱼
 
     event.recipes.create.mixing('culturaldelights:pickle', [ //腌黄瓜
@@ -372,6 +390,17 @@ ServerEvents.recipes(event => {
         B: '#forge:cooked_beef',
         O: '#forge:crops/onion',
         R: 'farmersdelight:cooked_rice'
+    })
+
+    event.shaped('kubejs:bug_soup', [ //肥虫汤
+        'EBO',
+        ' R ',
+        '   '
+    ], {
+        E: '#forge:crops/chilipepper',
+        B: '#minecraft:leaves',
+        O: '#forge:crops/onion',
+        R: 'minecraft:beetroot_soup'
     })
 
     event.smoking('kubejs:pizza_margarita', 'kubejs:raw_pizza_margarita')
@@ -423,7 +452,7 @@ ServerEvents.recipes(event => {
                 }
             ],
             "tool": {
-                "item": "minecraft:stick"
+                "tag": "forge:tools/shovels"
             },
             "result": [
                 {

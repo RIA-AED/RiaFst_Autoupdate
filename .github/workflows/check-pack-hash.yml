@@ -1,0 +1,88 @@
+name: check-pack-hash
+
+on:
+    pull_request:
+    workflow_dispatch:
+
+permissions:
+    contents: read
+
+jobs:
+    verify-pack-hash:
+        name: Verify pack index hash
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
+
+            - name: Cache packwiz binary
+              id: cache-packwiz
+              uses: actions/cache@v4
+              with:
+                  path: ./.packwiz/bin
+                  key: packwiz-bin-${{ runner.os }}-nightly-link
+
+            - name: Download packwiz
+              if: steps.cache-packwiz.outputs.cache-hit != 'true'
+              run: |
+                  mkdir -p ./.packwiz/bin
+                  curl -sSL https://nightly.link/packwiz/packwiz/workflows/go/main/Linux%2064-bit%20x86.zip -o packwiz.zip
+                  unzip packwiz.zip
+                  mv packwiz ./.packwiz/bin/packwiz
+                  rm packwiz.zip
+                  chmod +x ./.packwiz/bin/packwiz
+
+            - name: Add packwiz to PATH
+              run: echo "${{ github.workspace }}/.packwiz/bin" >> $GITHUB_PATH
+
+            - name: Cache packwiz downloads
+              id: cache-mods
+              uses: actions/cache@v4
+              with:
+                  path: ./.packwiz/cache
+                  key: packwiz-cache-${{ runner.os }}-${{ hashFiles('pack.toml', 'index.toml', 'mods/**/*.pw.toml') }}
+                  restore-keys: |
+                      packwiz-cache-${{ runner.os }}-
+
+            - name: Read initial index hash
+              id: initial-hash
+              run: |
+                  python3 - <<'PY'
+                  import os
+                  import tomllib
+                  from pathlib import Path
+
+                  data = tomllib.loads(Path('pack.toml').read_text())
+                  value = data['index']['hash']
+
+                  with open(os.environ['GITHUB_OUTPUT'], 'a', encoding='utf-8') as fh:
+                          fh.write(f"hash={value}\n")
+                  PY
+
+            - name: Refresh packwiz index
+              run: packwiz refresh --cache "./.packwiz/cache"
+
+            - name: Read refreshed index hash
+              id: refreshed-hash
+              run: |
+                  python3 - <<'PY'
+                  import os
+                  import tomllib
+                  from pathlib import Path
+
+                  data = tomllib.loads(Path('pack.toml').read_text())
+                  value = data['index']['hash']
+
+                  with open(os.environ['GITHUB_OUTPUT'], 'a', encoding='utf-8') as fh:
+                          fh.write(f"hash={value}\n")
+                  PY
+
+            - name: Compare hashes
+              run: |
+                  if [[ "${{ steps.initial-hash.outputs.hash }}" != "${{ steps.refreshed-hash.outputs.hash }}" ]]; then
+                      echo "::error::pack.toml index hash changed after running packwiz refresh"
+                      echo "Before: ${{ steps.initial-hash.outputs.hash }}"
+                      echo "After:  ${{ steps.refreshed-hash.outputs.hash }}"
+                      exit 1
+                  fi
+                  echo "Index hash unchanged: ${{ steps.initial-hash.outputs.hash }}"

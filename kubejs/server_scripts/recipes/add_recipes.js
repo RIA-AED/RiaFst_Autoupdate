@@ -64,6 +64,61 @@ let fuckChinjufuMod_input = [
 ];
 let fuckChinjufuMod_counter = 0 //盒子合成计数器
 
+let tall_door = [//无材料高门
+	'dramaticdoors:tall_river_door',
+	'dramaticdoors:tall_driftwood_door',
+	'dramaticdoors:tall_wisteria_door',
+	'dramaticdoors:tall_willow_door',
+	'dramaticdoors:tall_pine_door',
+	'dramaticdoors:tall_dark_cherry_door',
+	'dramaticdoors:tall_poise_door',
+	'dramaticdoors:tall_azalea_door',
+	'dramaticdoors:tall_maple_door',
+	'dramaticdoors:tall_yucca_door',
+	'dramaticdoors:tall_rosewood_door',
+	'dramaticdoors:tall_morado_door',
+	'dramaticdoors:tall_laurel_door',
+	'dramaticdoors:tall_kousa_door',
+	'dramaticdoors:tall_grimwood_door',
+	'dramaticdoors:tall_aspen_door'
+]
+let short_door = [//无材料矮门
+	'dramaticdoors:short_river_door',
+	'dramaticdoors:short_driftwood_door',
+	'dramaticdoors:short_wisteria_door',
+	'dramaticdoors:short_willow_door',
+	'dramaticdoors:short_pine_door',
+	'dramaticdoors:short_dark_cherry_door',
+	'dramaticdoors:short_poise_door',
+	'dramaticdoors:short_azalea_door',
+	'dramaticdoors:short_maple_door',
+	'dramaticdoors:short_yucca_door',
+	'dramaticdoors:short_rosewood_door',
+	'dramaticdoors:short_morado_door',
+	'dramaticdoors:short_laurel_door',
+	'dramaticdoors:short_kousa_door',
+	'dramaticdoors:short_grimwood_door',
+	'dramaticdoors:short_aspen_door'
+]
+let dye = [//无材料门对应颜料
+	'minecraft:brown_dye',
+	'minecraft:gray_dye',
+	'minecraft:white_dye',
+	'minecraft:green_dye',
+	'minecraft:pink_dye',
+	'minecraft:red_dye',
+	'minecraft:purple_dye',
+	'minecraft:blue_dye',
+	'minecraft:orange_dye',
+	'minecraft:lime_dye',
+	'minecraft:light_gray_dye',
+	'minecraft:magenta_dye',
+	'minecraft:cyan_dye',
+	'minecraft:light_blue_dye',
+	'minecraft:black_dye',
+	'minecraft:yellow_dye'
+]
+
 ServerEvents.recipes(event => {
 	event.recipes.create.emptying([Fluid.of('minecraft:milk', 1000), 'chinjufumod:block_mizuoke'], 'chinjufumod:item_mizuoke_milk').id('create:empty_chinjufumod_item_mizuoke_milk_of_minecraft_milk_fix');//添加正确的镇守府木奶桶分页配方
 	event.recipes.create.emptying([Fluid.of('minecraft:water', 1000), 'chinjufumod:block_mizuoke'], 'chinjufumod:block_mizuoke_full').id('create:empty_chinjufumod_block_mizuoke_full_of_minecraft_water');//添加镇守府水木桶分液配方
@@ -121,6 +176,10 @@ ServerEvents.recipes(event => {
 	event.shapeless('quark:limestone_pillar', 'create:limestone_pillar')
 	event.shapeless('create:limestone_pillar', 'quark:limestone_pillar')
 	event.shapeless('ultramarine:chisel_table', 'ultramarine:brush_and_inkstone')
+	event.shapeless('minecraft:pink_petals', '3x immersive_weathering:cherry_leaf_pile')
+	event.shapeless('4x farmersdelight:shepherds_pie', ['farmersdelight:shepherds_pie_block', '3x minecraft:bowl'])
+	event.shapeless('4x farmersdelight:stuffed_pumpkin', ['farmersdelight:stuffed_pumpkin_block', '4x minecraft:bowl'])
+	event.shapeless('4x farmersdelight:honey_glazed_ham', ['farmersdelight:honey_glazed_ham_block', '3x minecraft:bowl'])
 	event.stonecutting('create:limestone', 'quark:limestone')
 	event.stonecutting('quark:limestone', 'create:limestone')
 
@@ -294,12 +353,135 @@ ServerEvents.recipes(event => {
 		'minecraft:stone',
 		'ultramarine:raw_hematite'
 	])
+	event.recipes.create.mixing('minecraft:dripstone_block', [ //滴水石块
+		'minecraft:stone',
+		'minecraft:clay_ball'
+	])
+	event.recipes.create.compacting('minecraft:end_stone', [ //末地石
+		'minecraft:stone',
+		Fluid.of('minecraft:water', 250)
+	])
 	event.recipes.create.mixing('minecraft:ancient_debris', [ //远古残骸
 		'minecraft:netherrack',
 		'minecraft:netherite_scrap'
 	]).heated()
 
 	event.recipes.create.crushing('4x minecraft:netherite_scrap', 'minecraft:netherite_ingot')
+
+	event.recipes.create.crushing(Item.of('kaleidoscope_cookery:oil').withChance(0.125), [ //小麦种子粉碎轮出油脂
+		'minecraft:wheat_seeds'
+	])
+	event.recipes.create.crushing(Item.of('kaleidoscope_cookery:oil').withChance(0.25), [ //大豆粉碎轮出油脂
+		'chinjufumod:item_seeds_soy'
+	])
+
+	//=====各种门=====
+	//矮喇叭木门（夸克花木）
+	event.stonecutting('2x dramaticdoors:short_quark_blossom_door', 'quark:blossom_door')
+	//高矮蜜脾门
+	event.shaped('dramaticdoors:tall_honeycomb_door', [
+		'AA ',
+		'AA ',
+		'AA '
+	], {
+		A: 'minecraft:honeycomb_block'
+    })
+	event.shaped('dramaticdoors:short_honeycomb_door', [
+		'   ',
+		'AA ',
+		'AA '
+	], {
+		A: 'minecraft:honeycomb_block'
+    })
+	//高矮玻璃门
+	event.shaped('dramaticdoors:tall_glass_door', [
+		'AA ',
+		'AA ',
+		'AA '
+	], {
+		A: 'minecraft:glass'
+    })
+	event.shaped('dramaticdoors:short_glass_door', [
+		'   ',
+		'AA ',
+		'AA '
+	], {
+		A: 'minecraft:glass'
+    })
+	//高矮齿门
+	event.shaped('dramaticdoors:tall_tooth_door', [
+		'AB ',
+		'AB ',
+		'AB '
+	], {
+		A: 'create:cogwheel',
+		B: '#minecraft:planks'
+    })
+	event.shaped('dramaticdoors:short_tooth_door', [
+		'   ',
+		'AB ',
+		'AB '
+	], {
+		A: 'create:cogwheel',
+		B: '#minecraft:planks'
+    })
+	//无材料高矮木门
+	for(var i = 0;i <= 15;i++){
+		event.shapeless(tall_door[i],[
+        '#dramaticdoors:tall_wooden_doors',dye[i]]
+		)
+		event.shapeless(short_door[i],[
+        '#dramaticdoors:short_wooden_doors',dye[i]]
+		)
+	}
+	//旧矮金属门（并非金属
+	event.stonecutting('2x dramaticdoors:short_andesite_casing_door', 'create:andesite_door')
+	event.stonecutting('2x dramaticdoors:short_brass_casing_door', 'create:brass_door')
+	event.stonecutting('2x dramaticdoors:short_copper_casing_door', 'create:copper_door')
+	//高矮金属门（并非金属
+	event.shaped('2x dramaticdoors:tall_andesite_casing_door', [
+		'A  ',
+		'A  ',
+		'A  '
+	], {
+		A: 'create:andesite_door'
+    })
+	event.shaped('2x dramaticdoors:tall_brass_casing_door', [
+		'A  ',
+		'A  ',
+		'A  '
+	], {
+		A: 'create:brass_door'
+    })
+	event.shaped('2x dramaticdoors:tall_copper_casing_door', [
+		'A  ',
+		'A  ',
+		'A  '
+	], {
+		A: 'create:copper_door'
+    })
+	//高矮银门（铝？
+	event.shaped('dramaticdoors:tall_silver_door', [
+		'AA ',
+		'AA ',
+		'AA '
+	], {
+		A: 'chinjufumod:item_ingot_alumi'
+    })
+	event.shaped('dramaticdoors:short_silver_door', [
+		'   ',
+		'AA ',
+		'AA '
+	], {
+		A: 'chinjufumod:item_ingot_alumi'
+    })
+
+	//移除兔肉切小肉配方
+	event.remove({id:'kaleidoscope_cookery:chopping_board/raw_cut_small_meats_from_rabbit'})
+	event.replaceInput([{output:'kaleidoscope_cookery:spicy_chicken'},//切制小肉相关森罗配方替换
+		{output:'kaleidoscope_cookery:yakitori'},{output:'kaleidoscope_cookery:stuffed_tiger_skin_pepper'},
+		{output:'kaleidoscope_cookery:numbing_spicy_chicken'},{output:'kaleidoscope_cookery:chicken_and_mushroom_stew'}],
+		'#forge:raw_chicken','kaleidoscope_cookery:raw_cut_small_meats')
 
 	event.recipes.createMechanicalCrafting('kubejs:raw_totem', [ //粗制图腾
 		'  D  ',
@@ -671,6 +853,8 @@ ServerEvents.recipes(event => {
 
 	event.recipes.create.crushing('4x minecraft:honeycomb', 'minecraft:honeycomb_block') //粉碎蜜脾块
 
+	event.smoking('ultramarine:polished_ebony_plank','ultramarine:polished_oak_plank') //乌木板材
+
 	//铜砖瓦锈蚀
 	event.recipes.create.splashing('create:exposed_copper_shingles', 'create:copper_shingles')
 	event.recipes.create.splashing('create:weathered_copper_shingles', 'create:exposed_copper_shingles')
@@ -794,4 +978,63 @@ ServerEvents.recipes(event => {
 		]).heated();
 	});
 
+	event.shaped(
+		Item.of('buildersaddition:cabinet_cherry', 1),
+		[
+			'PSP',
+			'P P',
+			'PSP'
+		],
+		{
+			P: 'quark:cherry_vertical_slab',
+			S: 'minecraft:cherry_slab'
+		}
+	);
+
+	event.shaped(
+		Item.of('kitchenkarrot:shaker', '{finish:0b,items:{Items:[],Size:12},time:0}'),
+		[
+			'   ',
+			'ABA',
+			'   '
+		],
+		{
+			A: 'minecraft:iron_nugget',
+			B: 'minecraft:bucket'
+		}
+	);
+
+	event.shaped(
+		Item.of('buildersaddition:cabinet_bamboo', 1),
+		[
+			'PSP',
+			'P P',
+			'PSP'
+		],
+		{
+			P: 'quark:bamboo_vertical_slab',
+			S: 'minecraft:bamboo_slab'
+		}
+	);
+
+	//钻石镰刀合成
+	event.shaped("kaleidoscope_cookery:diamond_sickle",
+		[
+			"YYX",
+			" TY",
+			"T  "
+		],
+		{
+			X: "minecraft:string",
+			T: "minecraft:stick",
+			Y: "minecraft:diamond"
+		}
+	).id("kaleidoscope_cookery:diamond_sickle");
+
+	//下界合金镰刀合成
+	event.recipes.minecraft.smithing_transform(
+		"kaleidoscope_cookery:netherite_sickle",
+		"kaleidoscope_cookery:diamond_sickle",
+		"minecraft:netherite_ingot"
+	).id("kaleidoscope_cookery:netherite_sickle");
 })

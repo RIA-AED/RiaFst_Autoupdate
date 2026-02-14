@@ -43,10 +43,13 @@ let tooltips = [
 	['kubejs:soy_sause_bottle', ['§7微生物和蛋白质的交响乐', '§7很多人心目中的完美调味品']],
 	['kubejs:delta_dust', ['§7怪力掰碎成的粉末,', '§7仍然保留了椰能特性', '§7神秘地附着在一起.']],
 	['kubejs:empty_music_sheet', ['§7可以记录乐谱的纸张,', '§7下蹲+右键：写入', '§7鼠标左右键：更换歌曲']],
-	['kubejs:drink659',['§7存有二阶堂希罗魔女因子的饮品','§7饮用后似乎能够临时获得部分二阶堂希罗魔法的效果','§7“她至今走过的路，未曾有一星污点；','§7在那个名为独善的理想乡中，','§7容不得绞刑台这般异物的存在。”']]
+	['kubejs:drink659', ['§7存有二阶堂希罗魔女因子的饮品', '§7饮用后似乎能够临时获得部分二阶堂希罗魔法的效果', '§7“她至今走过的路，未曾有一星污点；', '§7在那个名为独善的理想乡中，', '§7容不得绞刑台这般异物的存在。”']],
+	['kubejs:dumpling_wrapper', ['§7放置于砧板上用食材右键']],
+	['kubejs:raw_dumpling', ['§7需要合成为一盘生饺子']],
+	['kubejs:raw_dumpling_plate', ['§7右键厨锅烹饪', '§7或者丢入汤锅']],
 ]
 
-ItemEvents.tooltip(tooltip =>{
-    tooltips.forEach(it=>{tooltip.add(it[0],it[1])})
+ItemEvents.tooltip(tooltip => {
+	tooltips.forEach(it => { tooltip.add(it[0], it[1]) })
 })
 

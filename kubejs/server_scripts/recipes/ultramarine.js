@@ -198,7 +198,7 @@ ServerEvents.recipes(event => {
         //     return;
         // }
 
-        event.recipes.create.mixing([output, template], inputs).id(recipe.getId() + "_converted")
+        event.recipes.create.mixing([output], inputs).id(recipe.getId() + "_converted")
 
     });
 }

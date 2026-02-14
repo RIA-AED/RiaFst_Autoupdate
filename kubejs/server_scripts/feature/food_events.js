@@ -172,6 +172,7 @@ EntityEvents.hurt("minecraft:player", event => {
 ItemEvents.rightClicked("kitchencarrot:cocktail", event => {
 	if (event.hand != "MAIN_HAND") return
 	//event.player.addItemCooldown("kitchencarrot:cocktail",20)
+	if (!event.item || !event.item.nbt || !event.item.nbt.getString("cocktail")) return
 	event.player.persistentData.wineItemType = event.item.nbt.getString("cocktail")
 	let oldCount = 0
 	event.player.getAllSlots().forEach(it => {
@@ -264,28 +265,50 @@ function hotPotatoCounter(event) {
 	}
 }
 
-PlayerEvents.chat(event=>{
-	if(event.player.hasEffect("kubejs:madness"))event.cancel()
+PlayerEvents.chat(event => {
+	if (event.player.hasEffect("kubejs:madness")) event.cancel()
 })
 
-function madness(event){
-	if(!event.player.hasEffect("kubejs:madness"))return
-	let shitTalk = randomShitTalk[randint(0,randomShitTalk.length - 1)]
-	let player = event.player.name.getString()
-	event.server.runCommandSilent(`execute at ${player} run tellraw @a [{"text":"• ","color":"green"},{"text":"<","color":"dark_gray"},{"text":"${player}","color":"gray"},{"text":">: ","color":"dark_gray"},{"text":"${shitTalk}","color":"white"}]`)
-	event.server.scheduleInTicks(randint(1,500),function(callback){
-		madness(event)
+function madness(server, playerUUID) { // 定义一个函数，直接传入 server 和玩家 UUID
+	let player = server.getPlayer(playerUUID) 	// 每一轮循环都通过 UUID 重新获取最新的玩家对象
+	if (!player) { 	// 1. 如果玩家不在线，直接切断当前循环执行流（等他下次上线由 loggedIn 重新拉起）
+		return
+	}
+	if (!player.hasEffect("kubejs:madness")) {	// 2. 检查 Buff 是否还在
+		player.persistentData.remove('isMadnessRunning') // Buff 彻底没了，清除发疯标记，正式结束循环
+		return
+	}
+	// 执行发疯逻辑
+	let shitTalk = randomShitTalk[Math.floor(Math.random() * randomShitTalk.length)]
+	let playerName = player.name.getString()
+	server.runCommandSilent(`execute at ${playerName} run tellraw @a [{"text":" • ","color":"green"},{"text":"<","color":"dark_gray"},{"text":"${playerName}","color":"gray"},{"text":">: ","color":"dark_gray"},{"text":"${shitTalk}","color":"white"}]`)
+	// 计划下一轮
+	server.scheduleInTicks(Math.floor(Math.random() * 500) + 1, (callback) => {
+		madness(server, playerUUID)
 	})
 }
 
 ItemEvents.foodEaten("kubejs:bug_soup", event => {
 	let duration = 2400
-	if (event.player.hasEffect("kubejs:madness")) {
+	let hasEffect = event.player.hasEffect("kubejs:madness")
+	if (hasEffect) {
 		duration += event.player.getEffect("kubejs:madness").duration
 	}
 	event.player.potionEffects.add("kubejs:madness", duration, 0)
-	if(duration == 2400){
-		madness(event)
+	if (!event.player.persistentData.isMadnessRunning) {
+		event.player.persistentData.isMadnessRunning = true
+		madness(event.server, event.player.uuid)
+	}
+})
+
+PlayerEvents.loggedIn(event => { // --- 玩家上线事件：断点续传的关键 ---
+	const { player, server } = event
+	if (player.hasEffect("kubejs:madness") && player.persistentData.isMadnessRunning) {
+		server.scheduleInTicks(20, () => {
+			madness(server, player.uuid)
+		})
+	} else if (!player.hasEffect("kubejs:madness")) {
+		player.persistentData.remove('isMadnessRunning')
 	}
 })
 
@@ -325,7 +348,8 @@ BlockEvents.rightClicked("kubejs:ramen", event => {
 })
 
 ItemEvents.foodEaten("kubejs:sunshine_cod", event => {
-	event.server.runCommandSilent(`weather sun`)
-	event.server.runCommandSilent(`weather clear`)
+	let player = event.player.name.getString()
+	event.server.runCommandSilent(`execute as ${player} run weather clear`)
 	event.server.tell(`${event.player.name.getString()}食用了晴天鳕鱼，善哉，天公作美！`)
 })
+

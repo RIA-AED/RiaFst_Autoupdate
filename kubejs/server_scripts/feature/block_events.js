@@ -1,12 +1,16 @@
+BlockEvents.rightClicked("minecraft:bell",event=>{
+	if(event.hand != "MAIN_HAND")return
+	if(event.player.mainHandItem.id != "ultramarine:copper_cash_coin")return
+	event.server.runCommandSilent(`summon ultramarine:travelling_merchant ${event.block.pos.x} ${event.block.pos.y + 1} ${event.block.pos.z}`)
+	event.player.setStatusMessage("召唤了行商")
+	event.player.mainHandItem.count--
+})
+
+
 BlockEvents.rightClicked(event => {
 	let player = event.player.name.getString()
 	let pos = event.block.pos
 	if (event.hand != "MAIN_HAND") { return }
-
-	if (event.block == 'armourers_workshop:skinnable') {
-		let skin = event.block.pos
-		event.server.runCommandSilent(`execute at @a[name=${player}] run armourers animation block ${skin.x} ${skin.y} ${skin.z} play rightclick`)
-	}
 
 	if (event.block == 'minecraft:magma_block' && event.player.getHeldItem(event.hand) == 'minecraft:magma_cream') {
 		event.server.runCommandSilent(`particle minecraft:spit ${pos.x} ${pos.y + 0.2} ${pos.z} 1 0.4 0.4 1 20`)
