@@ -452,7 +452,7 @@ ServerEvents.recipes(event => {
                 }
             ],
             "tool": {
-                "item": "minecraft:stick"
+                "tag": "forge:tools/shovels"
             },
             "result": [
                 {
